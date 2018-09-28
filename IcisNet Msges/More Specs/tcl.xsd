@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.00">
+  <!--=========================================-->
+  <!--===== Interdomain Codelists -->
+  <!--===== DDNXA v5.00  -->
+  <!--===== Included Features: [4, 17, 18, 20, 24, 25, 28, 29]  -->
+  <!--=========================================-->
+  <!--===== Includes =====-->
+  <xs:include schemaLocation="doc.xsd" />
+  <!--===== Codelists =====-->
+  <!--=========================================-->
+  <!--===== ModificationType =====-->
+  <!--===== Used for (multiple) attribute Operation. =====-->
+  <!--===== Format: a1 =====-->
+  <!--===== Codelist: 24 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="ModificationType">
+    <xs:annotation>
+      <xs:documentation>Used for (multiple) attribute Operation. [Format: a1]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="C">
+        <xs:annotation>
+          <xs:documentation>Create</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="D">
+        <xs:annotation>
+          <xs:documentation>Delete</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="U">
+        <xs:annotation>
+          <xs:documentation>Update</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== MonthOfYear =====-->
+  <!--===== Format: an2 =====-->
+  <!--===== Codelist: 26 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="MonthOfYear">
+    <xs:annotation>
+      <xs:documentation>null [Format: an2]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="01">
+        <xs:annotation>
+          <xs:documentation>January</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="02">
+        <xs:annotation>
+          <xs:documentation>February</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="03">
+        <xs:annotation>
+          <xs:documentation>March</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="04">
+        <xs:annotation>
+          <xs:documentation>April</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="05">
+        <xs:annotation>
+          <xs:documentation>May</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="06">
+        <xs:annotation>
+          <xs:documentation>June</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="07">
+        <xs:annotation>
+          <xs:documentation>July</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="08">
+        <xs:annotation>
+          <xs:documentation>August</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="09">
+        <xs:annotation>
+          <xs:documentation>September</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="10">
+        <xs:annotation>
+          <xs:documentation>October</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="11">
+        <xs:annotation>
+          <xs:documentation>November</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation>December</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== Flag =====-->
+  <!--===== Used for attributes that can have a positive or a negative value. =====-->
+  <!--===== Format: n1 =====-->
+  <!--===== Codelist: 27 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="Flag">
+    <xs:annotation>
+      <xs:documentation>Used for attributes that can have a positive or a negative value. [Format: n1]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0">
+        <xs:annotation>
+          <xs:documentation>NO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>YES</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== FunctionalErrorCodes =====-->
+  <!--===== - Subset of the UN/EDIFACT generic error table. - For remarks on the codes : see DDNTA Sec. VII. =====-->
+  <!--===== Format: n2 =====-->
+  <!--===== Codelist: 49 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="FunctionalErrorCodes">
+    <xs:annotation>
+      <xs:documentation>- Subset of the UN/EDIFACT generic error table. - For remarks on the codes : see DDNTA Sec. VII. [Format: n2]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="12">
+        <xs:annotation>
+          <xs:documentation>Incorrect (code) value</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="13">
+        <xs:annotation>
+          <xs:documentation>Missing</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14">
+        <xs:annotation>
+          <xs:documentation>Value not supported in this position (code value constraint)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="15">
+        <xs:annotation>
+          <xs:documentation>Not supported in this position</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="19">
+        <xs:annotation>
+          <xs:documentation>Invalid decimal notation</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="26">
+        <xs:annotation>
+          <xs:documentation>Duplicate detected</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="35">
+        <xs:annotation>
+          <xs:documentation>Too many repetitions</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="37">
+        <xs:annotation>
+          <xs:documentation>Invalid type characters</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="38">
+        <xs:annotation>
+          <xs:documentation>Missing digit in front of decimal sign</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="39">
+        <xs:annotation>
+          <xs:documentation>Element too long (length constraint)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="40">
+        <xs:annotation>
+          <xs:documentation>Element too short (length constraint)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="90">
+        <xs:annotation>
+          <xs:documentation>Unknown MRN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="91">
+        <xs:annotation>
+          <xs:documentation>Duplicate MRN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="92">
+        <xs:annotation>
+          <xs:documentation>Message out of sequence</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="93">
+        <xs:annotation>
+          <xs:documentation>Invalid MRN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== PrefixSuffixLevel =====-->
+  <!--===== Used for CUSTOMS OFFICE LSD. =====-->
+  <!--===== Format: an1 =====-->
+  <!--===== Codelist: 53 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="PrefixSuffixLevel">
+    <xs:annotation>
+      <xs:documentation>Used for CUSTOMS OFFICE LSD. [Format: an1]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="A">
+        <xs:annotation>
+          <xs:documentation>Simple office (see box A in Customs Office List)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="E">
+        <xs:annotation>
+          <xs:documentation>Higher authority (see box E in Customs Office List)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== SystemUnavailabilityType =====-->
+  <!--===== Used for the attribute SYSTEM UNAVAILABILITY.System Unavailability Type. =====-->
+  <!--===== Format: a1 =====-->
+  <!--===== Codelist: 79 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="SystemUnavailabilityType">
+    <xs:annotation>
+      <xs:documentation>Used for the attribute SYSTEM UNAVAILABILITY.System Unavailability Type. [Format: a1]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="N">
+        <xs:annotation>
+          <xs:documentation>Business service not implemented</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="S">
+        <xs:annotation>
+          <xs:documentation>Scheduled Unavailability</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="U">
+        <xs:annotation>
+          <xs:documentation>Unscheduled Unavailability</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== DayInTheWeek =====-->
+  <!--===== Format: n1 =====-->
+  <!--===== Codelist: 105 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="DayInTheWeek">
+    <xs:annotation>
+      <xs:documentation>null [Format: n1]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1">
+        <xs:annotation>
+          <xs:documentation>Monday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2">
+        <xs:annotation>
+          <xs:documentation>Tuesday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3">
+        <xs:annotation>
+          <xs:documentation>Wednesday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4">
+        <xs:annotation>
+          <xs:documentation>Thursday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5">
+        <xs:annotation>
+          <xs:documentation>Friday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6">
+        <xs:annotation>
+          <xs:documentation>Saturday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7">
+        <xs:annotation>
+          <xs:documentation>Sunday</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--=========================================-->
+  <!--===== CustomSystem =====-->
+  <!--===== Format: n..2 =====-->
+  <!--===== Codelist: 136 =====-->
+  <!--=========================================-->
+  <xs:simpleType name="CustomSystem">
+    <xs:annotation>
+      <xs:documentation>null [Format: n..2]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token" />
+  </xs:simpleType>
+</xs:schema>
+

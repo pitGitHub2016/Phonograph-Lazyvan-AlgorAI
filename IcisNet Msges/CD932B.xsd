@@ -1,0 +1,2581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.00">
+  <!--=========================================-->
+  <!--===== IE932:C_REF_DAT  -->
+  <!--===== COMMON RD DATA  -->
+  <!--===== ECS Domain Definition  -->
+  <!--===== DDNXA v5.00  -->
+  <!--===== Included Features: [4, 17, 18, 20, 24, 25, 28, 29]  -->
+  <!--=========================================-->
+  <!--===== Includes =====-->
+  <xs:include schemaLocation="simple_types_ecs.xsd" />
+  <xs:include schemaLocation="simple_types.xsd" />
+  <xs:include schemaLocation="complex_types.xsd" />
+  <xs:include schemaLocation="tcl_ecs.xsd" />
+  <xs:include schemaLocation="tcl.xsd" />
+  <xs:include schemaLocation="doc.xsd" />
+  <!--===== Root Element =====-->
+  <xs:element name="CD932B" type="CD932B" />
+  <!--===== Root Element Content =====-->
+  <xs:complexType name="CD932B">
+    <xs:sequence>
+      <xs:group ref="MESSAGE" />
+      <xs:element name="RESOFCON534" type="RESOFCON534" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="RESULTS OF CONTROL" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AMEREJMOT429" type="AMEREJMOT429" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="AMENDMENT REJECTION MOTIVATION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AARREJREA432" type="AARREJREA432" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="AAR/AER REJECTION REASON" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ATRREJREA435" type="ATRREJREA435" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ATR REJECTION REASON" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CONRESCOD438" type="CONRESCOD438" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="CONTROL RESULT CODE" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="COU441" type="COU441" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="COUNTRY" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="COUREG444" type="COUREG444" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="COUNTRY REGIME" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSOFFGEOINF447" type="CUSOFFGEOINF447" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="CUSTOMS OFFICE GEO INFO" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CURCOD450" type="CURCOD450" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="CURRENCY CODE" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DISSOLNOT456" type="DISSOLNOT456" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="DISCREPANCIES SOLVED NOTIFICATION" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DIVREJREA459" type="DIVREJREA459" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="DIVERSION REJECTION REASON" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DOCTYP462" type="DOCTYP462" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="DOCUMENT TYPE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GUATYP472" type="GUATYP472" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="GUARANTEE TYPE" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GUAMON475" type="GUAMON475" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="GUARANTEE MONITORING" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="INVGUAREA478" type="INVGUAREA478" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="INVALID GUARANTEE REASON" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANCOD481" type="LANCOD481" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE CODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PACCOD484" type="PACCOD484" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PACKAGING CODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ROL490" type="ROL490" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ROLE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SENGOOCOD493" type="SENGOOCOD493" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="SENSITIVE GOODS CODE" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SPEMENCOD496" type="SPEMENCOD496" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="SPECIAL MENTION CODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="STATYP499" type="STATYP499" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="STATISTICS TYPE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRATYP502" type="TRATYP502" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TRAFFIC TYPE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSOPESTATYP505" type="CUSOPESTATYP505" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="CUSTOMS OPERATION STATE TYPE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UNIOFMEA508" type="UNIOFMEA508" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="UNIT OF MEASURE" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UNL511" type="UNL511" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="UN/LOCODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRAMOD513" type="TRAMOD513" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TRANSPORT MODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="QUEONGUATYP516" type="QUEONGUATYP516" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="QUERY ON GUARANTEE TYPE" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SPENOTCODSNC2" type="SPENOTCODSNC2" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="SPECIFIC NOTES CODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="COMCOD389" type="COMCOD389" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="COMPLEMENTARY CODE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EXPQUEREACOD402" type="EXPQUEREACOD402" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="EXPORT QUERY REASON CODE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="INCCOD425" type="INCCOD425" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="INCOTERM CODE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NATTRANCOD451" type="NATTRANCOD451" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="NATURE OF TRANSACTION CODE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PROREQ490" type="PROREQ490" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PROCEDURE REQUESTED" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PREPRO477" type="PREPRO477" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PREVIOUS PROCEDURE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="REPSTACOD503" type="REPSTACOD503" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="REPRESENTATIVE STATUS CODE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RISANARESCOD382" type="RISANARESCOD382" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="RISK ANALYSIS RESULT CODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SPECCIRIND384" type="SPECCIRIND384" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="SPECIFIC CIRCUMSTANCE INDICATOR" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SUMDECREJREACOD544" type="SUMDECREJREACOD544" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="SUMMARY DECLARATION REJECTION REASON CODE" />
+            <rule name="TR1013" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TYPOFTAX570" type="TYPOFTAX570" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TYPE OF TAX" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="WARTYP595" type="WARTYP595" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="WAREHOUSE TYPE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UNDANGOOCOD583" type="UNDANGOOCOD583" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="UN DANGEROUS GOODS CODE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="COMNATPRO106" type="COMNATPRO106" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="COMMUNITY NATIONAL PROCEDURE" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PREVDOCCAT464" type="PREVDOCCAT464" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PREVIOUS DOCUMENT CATEGORY" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="METHOFPAY367" type="METHOFPAY367" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="METHOD OF PAYMENT" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRACHAMETOFPAY557" type="TRACHAMETOFPAY557" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TRANSPORT CHARGES METHOD OF PAYMENT" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DECTYP453" type="DECTYP453" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="DECLARATION TYPE" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DECTYPBX2" type="DECTYPBX2" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="DECLARATION TYPE (BOX 1.2)" />
+            <rule name="TR1003" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="INF359" type="INF359" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="INFORMATION" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PREDOCTYP463" type="PREDOCTYP463" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PREVIOUS DOCUMENT TYPE" />
+            <rule name="TR1012" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="REQINF690" type="REQINF690" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="REQUESTED INFORMATION" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ITENUMREJREACOD440" type="ITENUMREJREACOD440" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ITEM NUMBER REJECTION REASON CODE" />
+            <rule name="TR1006" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSINT632" type="CUSINT632" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="CUSTOMS INTERVENTION" />
+            <rule name="TR1006" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="INFTYP432" type="INFTYP432" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="INFORMATION TYPE" />
+            <rule name="TR1006" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RESCOD" type="RESCOD" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="RESPONSE CODE" />
+            <rule name="TR1002" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== MESSAGE Content =====-->
+  <xs:group name="MESSAGE">
+    <xs:sequence>
+      <xs:element name="SynIdeMES1" type="SyntaxIdentifier">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Syntax identifier" />
+            <codeList name="SyntaxIdentifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SynVerNumMES2" type="SyntaxVersionNumber">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Syntax version number" />
+            <codeList name="SyntaxVersionNumber" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesSenMES3" type="Alphanumeric_Max35">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message sender" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SenIdeCodQuaMES4" type="Alphanumeric_Max4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Sender identification code qualifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesRecMES6" type="Alphanumeric_Max35">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message recipient" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecIdeCodQuaMES7" type="Alphanumeric_Max4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Recipient identification code qualifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DatOfPreMES9" type="Numeric_6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Date of preparation" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TimOfPreMES10" type="Numeric_4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Time of preparation" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IntConRefMES11" type="Alphanumeric_Max14">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Interchange control reference" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecRefMES12" type="Alphanumeric_Max14" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Recipient's reference/password" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecRefQuaMES13" type="Alphanumeric_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Recipient's reference/password qualifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TesIndMES18" type="Flag" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Test indicator" />
+            <rule name="TR9085" />
+            <codeList name="Flag" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesIdeMES19" type="Alphanumeric_Max14">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message identification" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesTypMES20" type="MessageTypes">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message type" />
+            <codeList name="MessageTypes" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <!--===== RESULTS OF CONTROL =====-->
+  <xs:complexType name="RESOFCON534">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="RESULTS OF CONTROL" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConInd424" type="Alphanumeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Control indicator" />
+            <codeList name="ControlIndicatorRocGiRoc" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <xs:complexType name="LANSPEDAT515">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="LANGUAGE SPECIFIC DATA" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LanCod347" type="LanguageCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Language code" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Des110" type="Alphanumeric_Max140">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Description" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515LNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Language specific data LNG" />
+            <rule name="TR0099" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <xs:complexType name="ACT517">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="ACTION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Ope288" type="ModificationType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Operation" />
+            <rule name="R410" />
+            <codeList name="ModificationType" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ValDat103" type="DateType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Validity date" />
+            <rule name="R410" />
+            <condition name="C300" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ModSub144" type="Numeric_1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Modification subtype" />
+            <rule name="R410" />
+            <condition name="C300" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LegRef197" type="Alphanumeric_Max70" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Legal references" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResDatMan302" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Responsible data manager" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActId" type="Alphanumeric_Max20">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Action identification" />
+            <rule name="TR9001" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== AMENDMENT REJECTION MOTIVATION =====-->
+  <xs:complexType name="AMEREJMOT429">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="AMENDMENT REJECTION MOTIVATION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AmeRejMotCod31" type="Numeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Amendment rejection motivation code" />
+            <codeList name="AmendmentRejectionMotivationCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== AAR/AER REJECTION REASON =====-->
+  <xs:complexType name="AARREJREA432">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="AAR/AER REJECTION REASON" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AARRejReaCod44" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="AAR/AER rejection reason code" />
+            <codeList name="AarAerRejectionReason" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== ATR REJECTION REASON =====-->
+  <xs:complexType name="ATRREJREA435">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="ATR REJECTION REASON" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ATRRejReaCod57" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ATR rejection reason code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== CONTROL RESULT CODE =====-->
+  <xs:complexType name="CONRESCOD438">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="CONTROL RESULT CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConResCod70" type="Alphanumeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Control result code" />
+            <codeList name="ControlResult" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== COUNTRY =====-->
+  <xs:complexType name="COU441">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="COUNTRY" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CouCod83" type="CountryCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TCCEntDat84" type="DateType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TCC entry date" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NCTEntDat85" type="DateType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="NCTS entry date" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GeoCod86" type="Numeric_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Geo-nomenclature code" />
+            <codeList name="GeoNomenclatureCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouRegCod87" type="Alphanumeric_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country regime code" />
+            <codeList name="CountryRegime" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== COUNTRY REGIME =====-->
+  <xs:complexType name="COUREG444">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="COUNTRY REGIME" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CouRegCod100" type="Alphanumeric_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country regime code" />
+            <codeList name="CountryRegime" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== CUSTOMS OFFICE GEO INFO =====-->
+  <xs:complexType name="CUSOFFGEOINF447">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="CUSTOMS OFFICE GEO INFO" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CusOffGeoInfCod113" type="Alphanumeric_Max6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Geo info code" />
+            <codeList name="GeoInfoCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== CURRENCY CODE =====-->
+  <xs:complexType name="CURCOD450">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="CURRENCY CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Cur126" type="Alphanumeric_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Currency" />
+            <codeList name="CurrencyCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RatVal127" type="Decimal_8_6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Rate value" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== DISCREPANCIES SOLVED NOTIFICATION =====-->
+  <xs:complexType name="DISSOLNOT456">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="DISCREPANCIES SOLVED NOTIFICATION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DisSolNotCod153" type="Alphanumeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Discrepancies solved notification code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== DIVERSION REJECTION REASON =====-->
+  <xs:complexType name="DIVREJREA459">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="DIVERSION REJECTION REASON" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DivRejReaCod166" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Diversion rejection reason code" />
+            <codeList name="DiversionRejection" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== DOCUMENT TYPE =====-->
+  <xs:complexType name="DOCTYP462">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="DOCUMENT TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DocTyp179" type="Alphanumeric_Max4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Document type" />
+            <codeList name="DocumentTypeCommon" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TraDoc199" type="Flag">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Transport document" />
+            <rule name="R230" />
+            <codeList name="Flag" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <xs:complexType name="LANSPEDAT515_Alt1">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="LANGUAGE SPECIFIC DATA" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LanCod347" type="LanguageCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Language code" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Des110" type="Alphanumeric_Max350">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Description" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515LNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Language specific data LNG" />
+            <rule name="TR0099" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== GUARANTEE TYPE =====-->
+  <xs:complexType name="GUATYP472">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="GUARANTEE TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GuaTypCod217" type="Alphanumeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Guarantee type" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== GUARANTEE MONITORING =====-->
+  <xs:complexType name="GUAMON475">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="GUARANTEE MONITORING" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GuaMonCod230" type="Numeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Guarantee monitoring code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== INVALID GUARANTEE REASON =====-->
+  <xs:complexType name="INVGUAREA478">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="INVALID GUARANTEE REASON" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InvGuaReaCod243" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Invalid guarantee reason code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== LANGUAGE CODE =====-->
+  <xs:complexType name="LANCOD481">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="LANGUAGE CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LanCod256" type="LanguageCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Language code" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== PACKAGING CODE =====-->
+  <xs:complexType name="PACCOD484">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PACKAGING CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PacCod269" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Kind of packages" />
+            <rule name="R456" />
+            <codeList name="KindOfPackages" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ROLE =====-->
+  <xs:complexType name="ROL490">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="ROLE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Rol295" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Role" />
+            <codeList name="Role" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== SENSITIVE GOODS CODE =====-->
+  <xs:complexType name="SENGOOCOD493">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="SENSITIVE GOODS CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ComCod308" type="Alphanumeric_Max6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Commodity code (taric code)" />
+            <rule name="R445" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SenGooCod309" type="Numeric_Max2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Sensitive goods code" />
+            <rule name="R445" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RefQua310" type="Numeric_Max6" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Reference quantity" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UniOfMea311" type="Alphanumeric_Max3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Unit of measure code" />
+            <codeList name="UnitOfMeasure" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EECTerLim312" type="Flag">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="EEC territory limitation" />
+            <rule name="R230" />
+            <codeList name="Flag" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== SPECIAL MENTION CODE =====-->
+  <xs:complexType name="SPEMENCOD496">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="SPECIAL MENTION CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SpeMenCod325" type="Alphanumeric_Max5">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Additional information coded" />
+            <codeList name="AdditionalInformationIdCommon" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== STATISTICS TYPE =====-->
+  <xs:complexType name="STATYP499">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="STATISTICS TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="StaTyp338" type="Alphanumeric_Max4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Statistics type" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== TRAFFIC TYPE =====-->
+  <xs:complexType name="TRATYP502">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="TRAFFIC TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TraTyp351" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Traffic type" />
+            <codeList name="TrafficType" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== CUSTOMS OPERATION STATE TYPE =====-->
+  <xs:complexType name="CUSOPESTATYP505">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="CUSTOMS OPERATION STATE TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CusOpeStaTyp364" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Customs Operation State Types" />
+            <codeList name="CustomsOperationStateTypes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== UNIT OF MEASURE =====-->
+  <xs:complexType name="UNIOFMEA508">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="UNIT OF MEASURE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="UniOfMeaCod377" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Unit of measure code" />
+            <codeList name="UnitOfMeasure" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== UN/LOCODE =====-->
+  <xs:complexType name="UNL511">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="UN/LOCODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CouCod390" type="CountryCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UNL391" type="Alpha_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="UN/LOCODE id" />
+            <rule name="R460" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UNLNam392" type="Alpha_Max29_With_Spaces">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="UN/LOCODE name" />
+            <rule name="R422" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== TRANSPORT MODE =====-->
+  <xs:complexType name="TRAMOD513">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="TRANSPORT MODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TraMod401" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Transport mode" />
+            <codeList name="TransportMode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== QUERY ON GUARANTEE TYPE =====-->
+  <xs:complexType name="QUEONGUATYP516">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="QUERY ON GUARANTEE TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="QueIde414" type="Numeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Query identifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== SPECIFIC NOTES CODE =====-->
+  <xs:complexType name="SPENOTCODSNC2">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="SPECIFIC NOTES CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SpeNotCod644" type="Alphanumeric_Max6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Specific notes code" />
+            <codeList name="SpecificNotesCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== COMPLEMENTARY CODE =====-->
+  <xs:complexType name="COMCOD389">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="COMPLEMENTARY CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ComCodCOMCOD401" type="Numeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Complementary code" />
+            <codeList name="ComplementaryCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== EXPORT QUERY REASON CODE =====-->
+  <xs:complexType name="EXPQUEREACOD402">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="EXPORT QUERY REASON CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ExpQueReaCodEXPQUEREACOD414" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Export_Query Reason Code" />
+            <codeList name="ExportQueryReasonCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== INCOTERM CODE =====-->
+  <xs:complexType name="INCCOD425">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="INCOTERM CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IncCodINCCOD652" type="Alpha_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Incoterm Code" />
+            <codeList name="IncotermCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== NATURE OF TRANSACTION CODE =====-->
+  <xs:complexType name="NATTRANCOD451">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="NATURE OF TRANSACTION CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NatTranCodNATTRACOD463" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Nature of transaction code" />
+            <codeList name="NatureOfTransactionCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== PROCEDURE REQUESTED =====-->
+  <xs:complexType name="PROREQ490">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PROCEDURE REQUESTED" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ProReqPROREQ502" type="Alphanumeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Procedure requested" />
+            <codeList name="ProcedureRequested" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== PREVIOUS PROCEDURE =====-->
+  <xs:complexType name="PREPRO477">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PREVIOUS PROCEDURE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PreProPREPRO489" type="Alphanumeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous Procedure" />
+            <codeList name="PreviousProcedure" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== REPRESENTATIVE STATUS CODE =====-->
+  <xs:complexType name="REPSTACOD503">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="REPRESENTATIVE STATUS CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="RepStatCodREPSTATCOD516" type="Numeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Representative status code" />
+            <codeList name="RepresentativeStatusCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== RISK ANALYSIS RESULT CODE =====-->
+  <xs:complexType name="RISANARESCOD382">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="RISK ANALYSIS RESULT CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="RisAnaResCodRISANARESCOD528" type="Alphanumeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Risk Analysis result code" />
+            <codeList name="RiskAnalysisResultCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== SPECIFIC CIRCUMSTANCE INDICATOR =====-->
+  <xs:complexType name="SPECCIRIND384">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="SPECIFIC CIRCUMSTANCE INDICATOR" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SpeCirIndSPECIRIND543" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Specific Circumstance Indicator" />
+            <codeList name="SpecificCircumstanceIndicator" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== SUMMARY DECLARATION REJECTION REASON CODE =====-->
+  <xs:complexType name="SUMDECREJREACOD544">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="SUMMARY DECLARATION REJECTION REASON CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SumDecRejReaCodSUMDECREJREACOD556" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Summary Declaration rejection reason code" />
+            <codeList name="SummaryDeclarationRejectionReasonCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== TYPE OF TAX =====-->
+  <xs:complexType name="TYPOFTAX570">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="TYPE OF TAX" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TypOfTaxTYPOFTAX582" type="Alphanumeric_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Type of tax" />
+            <codeList name="TypeOfTax" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== WAREHOUSE TYPE =====-->
+  <xs:complexType name="WARTYP595">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="WAREHOUSE TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="WarTypWARTYP607" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Warehouse type" />
+            <codeList name="WarehouseTypeWarehouseType" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== UN DANGEROUS GOODS CODE =====-->
+  <xs:complexType name="UNDANGOOCOD583">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="UN DANGEROUS GOODS CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="UNdangoocodUNDANGOOCOD594" type="Alphanumeric_4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="UN dangerous goods code" />
+            <codeList name="UnDangerousGoodsCode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== COMMUNITY NATIONAL PROCEDURE =====-->
+  <xs:complexType name="COMNATPRO106">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="COMMUNITY NATIONAL PROCEDURE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ComNatProCOM613" type="Alphanumeric_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Community / National Procedure" />
+            <codeList name="CommunityNationalProcedure" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== PREVIOUS DOCUMENT CATEGORY =====-->
+  <xs:complexType name="PREVDOCCAT464">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PREVIOUS DOCUMENT CATEGORY" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PreDocCatPREDOCCAT476" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous Document Category" />
+            <codeList name="PreviousDocumentCategory" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== METHOD OF PAYMENT =====-->
+  <xs:complexType name="METHOFPAY367">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="METHOD OF PAYMENT" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MethofPayMETHOFPAY450" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Method of payment" />
+            <codeList name="MethodOfPayment" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== TRANSPORT CHARGES METHOD OF PAYMENT =====-->
+  <xs:complexType name="TRACHAMETOFPAY557">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="TRANSPORT CHARGES METHOD OF PAYMENT" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TraChaMetOfPayTRACHAMETOFPAY569" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Transport charges/ Method of Payment" />
+            <codeList name="TransportChargesMethodOfPayment" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== DECLARATION TYPE =====-->
+  <xs:complexType name="DECTYP453">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="DECLARATION TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DecTyp140" type="Alphanumeric_Max9">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Type of declaration" />
+            <codeList name="TypeOfDeclarationTransitExportProcedures" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== DECLARATION TYPE (BOX 1.2) =====-->
+  <xs:complexType name="DECTYPBX2">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="DECLARATION TYPE (BOX 1.2)" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TypOfDecBx2DEC626" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Type of declaration (Box 1.2)" />
+            <codeList name="TypeOfDeclarationBox" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== INFORMATION =====-->
+  <xs:complexType name="INF359">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="INFORMATION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InfCodINF045" type="Numeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Information Code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== PREVIOUS DOCUMENT TYPE =====-->
+  <xs:complexType name="PREDOCTYP463">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PREVIOUS DOCUMENT TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PreDocTyp180" type="Alphanumeric_Max6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document type" />
+            <codeList name="PreviousDocumentTypeCommon" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== REQUESTED INFORMATION =====-->
+  <xs:complexType name="REQINF690">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="REQUESTED INFORMATION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ReqInfCodREQINF546" type="Numeric_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Requested Information Code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+  <!--===== ITEM NUMBER REJECTION REASON CODE =====-->
+  <xs:complexType name="ITENUMREJREACOD440">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="ITEM NUMBER REJECTION REASON CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ItemNumRejReaCodITENUMREJREACOD444" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Item number rejection reason code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== CUSTOMS INTERVENTION =====-->
+  <xs:complexType name="CUSINT632">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="CUSTOMS INTERVENTION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CusIntCodCUSINT665" type="Alphanumeric_Max4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Customs Intervention code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== INFORMATION TYPE =====-->
+  <xs:complexType name="INFTYP432">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="INFORMATION TYPE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="InfTypINFTYP433" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Information type" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== ACTION =====-->
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== RESPONSE CODE =====-->
+  <xs:complexType name="RESCOD">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="RESPONSE CODE" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ResCodRESCOD569" type="Numeric_Max2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Response Code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LANSPEDAT515" type="LANSPEDAT515" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="LANGUAGE SPECIFIC DATA" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACT517" type="ACT517">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="ACTION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== LANGUAGE SPECIFIC DATA =====-->
+  <!--===== ACTION =====-->
+</xs:schema>
+

@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.00">
+  <!--=========================================-->
+  <!--===== EA13:E_RE_EDE_WSTE  -->
+  <!--===== Αιτημα Διορθωσης ΕΔΕ Ανευ Στατιστικής Εξαγωγής  -->
+  <!--===== ECS Domain Definition  -->
+  <!--===== DDNXA v5.00  -->
+  <!--===== Included Features: [4, 17, 18, 20, 24, 25, 28, 29]  -->
+  <!--=========================================-->
+  <!--===== Includes =====-->
+  <xs:include schemaLocation="simple_types_ecs.xsd" />
+  <xs:include schemaLocation="simple_types.xsd" />
+  <xs:include schemaLocation="complex_types.xsd" />
+  <xs:include schemaLocation="tcl_ecs.xsd" />
+  <xs:include schemaLocation="tcl.xsd" />
+  <xs:include schemaLocation="doc.xsd" />
+  <!--===== Root Element =====-->
+  <xs:element name="EA13A" type="EA13A" />
+  <!--===== Root Element Content =====-->
+  <xs:complexType name="EA13A">
+    <xs:sequence>
+      <xs:group ref="MESSAGE" />
+      <xs:element name="HEAHEA" type="HEAHEA">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="HEADER" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRAEXPEX1" type="TRAEXPEX1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(EXPORTER) TRADER" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRACONCE1" type="TRACONCE1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(CONSIGNEE) TRADER" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSOFFEXPERT" type="CUSOFFEXPERT">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(EXPORT) CUSTOMS OFFICE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSOFFEXIEXT" type="CUSOFFEXIEXT" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(EXIT) CUSTOMS OFFICE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CONRESERS" type="CONRESERS" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="CONTROL RESULT" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GOOITEGDS" type="GOOITEGDS" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="GOODS ITEM" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRADEC" type="TRADEC" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(DECLARANT) TRADER" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DEFPOSPAY" type="DEFPOSPAY" minOccurs="0" maxOccurs="9">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(PAYMENT) DEFERRED OR POSTPONED" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IDEWAR" type="IDEWAR" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(WAREHOUSE) IDENTIFICATION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="STATREP385" type="STATREP385" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(STATUS) REPRESENTATIVE" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== MESSAGE Content =====-->
+  <xs:group name="MESSAGE">
+    <xs:sequence>
+      <xs:element name="SynIdeMES1" type="SyntaxIdentifier">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Syntax identifier" />
+            <codeList name="SyntaxIdentifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SynVerNumMES2" type="SyntaxVersionNumber">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Syntax version number" />
+            <codeList name="SyntaxVersionNumber" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesSenMES3" type="Alphanumeric_Max35">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message sender" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SenIdeCodQuaMES4" type="Alphanumeric_Max4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Sender identification code qualifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesRecMES6" type="Alphanumeric_Max35">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message recipient" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecIdeCodQuaMES7" type="Alphanumeric_Max4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Recipient identification code qualifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DatOfPreMES9" type="Numeric_6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Date of preparation" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TimOfPreMES10" type="Numeric_4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Time of preparation" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IntConRefMES11" type="Alphanumeric_Max14">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Interchange control reference" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecRefMES12" type="Alphanumeric_Max14" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Recipient's reference/password" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecRefQuaMES13" type="Alphanumeric_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Recipient's reference/password qualifier" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AppRefMES14" type="Alphanumeric_Max14" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Application reference" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PriMES15" type="Alpha_1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Priority" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AckReqMES16" type="Flag" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Acknowledgement request" />
+            <codeList name="Flag" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ComAgrIdMES17" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Communications agreement id" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TesIndMES18" type="Flag" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Test indicator" />
+            <codeList name="Flag" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesIdeMES19" type="Alphanumeric_Max14">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message identification" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MesTypMES20" type="MessageTypes">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Message type" />
+            <codeList name="MessageTypes" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ComAccRefMES21" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Common access reference" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <!--===== HEADER =====-->
+  <xs:complexType name="HEAHEA">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="HEADER" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="RefNumHEA4" type="Alphanumeric_Max22">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Reference number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypOfDecHEA24" type="Alphanumeric_Max9">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Type of declaration" />
+            <codeList name="TypeOfDeclarationTransitExportProcedures" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouOfDesCodHEA30" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country of destination code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AgrLocOfGooCodHEA38" type="Alphanumeric_Max17" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Agreed location of goods, code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AgrLocOfGooHEA39" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Agreed location of goods" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AgrLocOfGooHEA39LNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Agreed location of goods LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouOfDisCodHEA55" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country of dispatch/export code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TraModAtBorHEA76" type="Numeric_Max2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Transport mode at border" />
+            <codeList name="TransportMode" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IdeOfMeaOfTraCroHEA85" type="Alphanumeric_Max27" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Identity of means of transport crossing border" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NatOfMeaOfTraCroHEA87" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Nationality of means of transport crossing border" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotNumOfIteHEA305" type="Numeric_Max5">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Total number of items" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotNumOfPacHEA306" type="Numeric_Max7" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Total number of packages" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotGroMasHEA307" type="Decimal_11_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Total gross mass" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AmdPlaHEA598" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Amendment place" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AmdPlaHEA598LNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Amendment place LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AmdDatHEA599" type="Numeric_8">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Date of amendment" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GraTotTaxAmoHEA1" type="Decimal_15_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Grand total taxes amount" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypOfDecBx12HEA651" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Type of declaration (Box 1.2)" />
+            <codeList name="TypeOfDeclarationBox" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ManEntNumHEA1028" type="Alphanumeric_Max6" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Manual Entry Number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ManEntYeaHEA1029" type="Alphanumeric_4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Manual Entry Year" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== (EXPORTER) TRADER =====-->
+  <xs:complexType name="TRAEXPEX1">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="(EXPORTER) TRADER" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NamEX17" type="TradNameType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Name" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StrAndNumEX122" type="StreetNumType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Street and number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PosCodEX123" type="PostalCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Postal code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CitEX124" type="CityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="City" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouEX125" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NADLNGEX" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="NAD LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IdTypEXP61" type="Numeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Identity Type" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IdNumEXP61" type="Alphanumeric_Max12">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Identity Number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== (CONSIGNEE) TRADER =====-->
+  <xs:complexType name="TRACONCE1">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="(CONSIGNEE) TRADER" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NamCE17" type="TradNameType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Name" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StrAndNumCE122" type="StreetNumType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Street and number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PosCodCE123" type="PostalCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Postal code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CitCE124" type="CityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="City" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouCE125" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NADLNGCE" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="NAD LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IDTypNEETRA1" type="Numeric_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Identity Type" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IDNumNEETRA2" type="Alphanumeric_Max12" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Identity Number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== CONTROL RESULT =====-->
+  <xs:complexType name="CONRESERS">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="CONTROL RESULT" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConResCodERS16" type="Alphanumeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Control result code" />
+            <codeList name="ControlResult" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DatLimERS69" type="Numeric_8">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Date limit" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== GOODS ITEM =====-->
+  <xs:complexType name="GOOITEGDS">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="GOODS ITEM" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IteNumGDS7" type="Numeric_Max5">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Item number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GooDesGDS23" type="Alphanumeric_Max280" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Goods description" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GooDesGDS23LNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Goods description LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GroMasGDS46" type="Decimal_11_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Gross mass" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NetMasGDS48" type="Decimal_11_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Net mass" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ProReqGDI1" type="Alphanumeric_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Procedure requested" />
+            <codeList name="ProcedureRequested" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreProGDI1" type="Alphanumeric_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous Procedure" />
+            <codeList name="PreviousProcedure" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ComNatProGIM1" type="Alphanumeric_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Community / National Procedure" />
+            <codeList name="CommunityNationalProcedure" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouOfOriGDI1" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country of Origin" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DisProRegGDI1" type="Alphanumeric_Max2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Dispatch / Production Region" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SupUniGDI1" type="Decimal_11_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Supplementary units" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotIteTaxAmoGDI1" type="Decimal_15_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Total item taxes amount" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StaValAmoGDI1" type="Decimal_11_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Statistical value amount" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NonCodProdDocGI" type="Alphanumeric_Max280" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Non Coded Produced Documents" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PREADMREFAR2" type="PREADMREFAR2" minOccurs="0" maxOccurs="9">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PREVIOUS ADMINISTRATIVE REFERENCES" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PRODOCDC2" type="PRODOCDC2" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PRODUCED DOCUMENTS/CERTIFICATES" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="COMCODGODITM" type="COMCODGODITM" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(CODE) COMMODITY" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CALTAXGOD" type="CALTAXGOD" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="(TAXES) CALCULATION" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PACGS2" type="PACGS2" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="PACKAGES" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GRN" type="GRN" minOccurs="0" maxOccurs="99">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="GRN" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== PREVIOUS ADMINISTRATIVE REFERENCES =====-->
+  <xs:complexType name="PREADMREFAR2">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PREVIOUS ADMINISTRATIVE REFERENCES" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PreDocTypAR21" type="Alphanumeric_Max6">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document type" />
+            <rule name="R079" />
+            <rule name="R893" />
+            <rule name="TR0100" />
+            <codeList name="PreviousDocumentTypeCommon" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocRefAR26" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document reference" />
+            <rule name="R893" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocRefLNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document reference LNG" />
+            <rule name="TR0099" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocCatPREADMREF21" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous Document Category" />
+            <codeList name="PreviousDocumentCategory" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocMrnAR1004" type="Alphanumeric_Max18" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document MRN" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocIteAR1005" type="Numeric_Max5" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document item number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocQuaAR1006" type="Decimal_11_3" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document Quantity" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocSupAR1007" type="Numeric_Max11" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document Supplementary units" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocSumDecPacAR1035" type="Alphanumeric_Max10" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document Summary Declaration Packages" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocBilOfLadTyp10" type="Alphanumeric_Max2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document Bill of Lading Type" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreDocBilOfLadNum11" type="Alphanumeric_Max70" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Previous document Bill of Lading Number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== PRODUCED DOCUMENTS/CERTIFICATES =====-->
+  <xs:complexType name="PRODOCDC2">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PRODUCED DOCUMENTS/CERTIFICATES" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DocTypDC21" type="Alphanumeric_Max4">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Document type" />
+            <codeList name="DocumentTypeCommon" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocRefDC23" type="Alphanumeric_Max35">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Document reference" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocRefDCLNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Document reference LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocInfDC1008" type="Alphanumeric_Max35" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Document Information" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocInfDC1008LNG" type="Alpha_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Document Information LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== (CODE) COMMODITY =====-->
+  <xs:complexType name="COMCODGODITM">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="(CODE) COMMODITY" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ComNomCMD1" type="Alphanumeric_Max8" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Combined Nomenclature" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TARCodCMD1" type="Alphanumeric_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TARIC code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TARFirAddCodCMD1" type="Alphanumeric_4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TARIC first additional code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TARSecAddCodCMD1" type="Alphanumeric_4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TARIC second additional code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NAtAddCodCMD1" type="Alphanumeric_4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="National additional code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== (TAXES) CALCULATION =====-->
+  <xs:complexType name="CALTAXGOD">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="(TAXES) CALCULATION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TypOfTaxCTX1" type="Alphanumeric_3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Type of tax" />
+            <codeList name="TypeOfTax" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TaxBasCTX1" type="Decimal_15_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Tax base" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RatOfTaxCTX1" type="Alphanumeric_Max15">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Rate of tax" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AmoOfTaxTCL1" type="Decimal_15_2">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Amount of tax" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MetOfPayCTX1" type="Alpha_1">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Method of payment" />
+            <codeList name="MethodOfPayment" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== PACKAGES =====-->
+  <xs:complexType name="PACGS2">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="PACKAGES" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MarNumOfPacGS21" type="Alphanumeric_Max42" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Marks &amp; numbers of packages" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MarNumOfPacGS21LNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Marks &amp; numbers of packages LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="KinOfPacGS23" type="Alphanumeric_Max3">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Kind of packages" />
+            <codeList name="KindOfPackages" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NumOfPacGS24" type="Numeric_Max5" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Number of packages" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NumOfPieGS25" type="Numeric_Max5" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Number of pieces" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== GRN =====-->
+  <xs:complexType name="GRN">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="GRN" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GrnNum1010" type="Alphanumeric_Max24" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="GRN Number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GRNAmouGRN2" type="Decimal_11_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="GRN Amount" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== (DECLARANT) TRADER =====-->
+  <xs:complexType name="TRADEC">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="(DECLARANT) TRADER" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NamTDE1" type="TradNameType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Name" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StrAndNumTDE1" type="StreetNumType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Street and number" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PosCodTDE1" type="PostalCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Postal code" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CiTDE1" type="CityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="City" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CouCodTDE1" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Country code" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TRADECLNG" type="LanguageCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="NAD LNG" />
+            <codeList name="LanguageCodes" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TINTDE1" type="TINType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="TIN" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpeMenTDE1022" type="Alphanumeric_5" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Special Mention" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--===== (WAREHOUSE) IDENTIFICATION =====-->
+  <xs:complexType name="IDEWAR">
+    <xs:annotation>
+      <xs:documentation>
+        <description value="(WAREHOUSE) IDENTIFICATION" />
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="WarTypWID1" type="Alpha_1" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Warehouse type" />
+            <codeList name="WarehouseTypeWarehouseType" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AutCouWID1" type="CountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Authorizing country" />
+            <codeList name="CountryCodesFullList" type="business" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="WarIdeWARIDE19" type="Alphanumeric_Max19">
+        <xs:annotation>
+          <xs:documentation>
+            <description value="Warehouse identification" />
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
