@@ -1,5 +1,7 @@
+#!flask/bin/python
+from flask import Flask, render_template, jsonify, json
 from PyPDF2 import PdfFileWriter, PdfFileReader
-import io, requests
+import io, requests, os, sys
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
@@ -7,51 +9,87 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from reportlab.pdfbase.ttfonts import TTFont
-import urllib, pandas as pd
+import urllib, pandas as pd, sendgrid
 
-def fetchWixDB_UserDocsUploads():
-    r = requests.get('https://gekko1990.wixsite.com/cn23/_functions/UserDocsUploads_algomyth_GAK2018')
+#sys.path.insert(0, '/opt/torus-engine/torus/')
+ParentPath = os.path.realpath('Users_OrdersUploads/')
+CN23_OutPath = os.path.realpath('CN23_Out/')
+
+#app = Flask(__name__)
+
+#@app.route('/')
+#def homepage():
+#    return render_template('no data')
+
+#@app.route('/PyCn23/<userId>/', methods=['GET'])
+def fetchWixData(userId):
+    r = requests.get('https://gekko1990.wixsite.com/cn23/_functions/UserDocsUploads_algomyth_GAK2018/'+userId)
     resp = r.json()
     for i in resp['items']:
-        #print(i)
-        try:
-            d0 = i['userId']
-            dm1 = i['field'].split('/')
-            fileName = dm1[-1]
-            fileWixID = dm1[-2]
+        #try:
+            wixUserEmail = i['userEmail']
 
-            urlWix = 'https://static.wixstatic.com/ugd/'+fileWixID
-            urllib.request.urlretrieve(urlWix, fileWixID.split('.')[0]+'-'+fileName)
-        except:
-            pass
+            if not os.path.exists(ParentPath + '/' + wixUserEmail + '/'):
+                os.makedirs(ParentPath + '/' + wixUserEmail + '/')
 
-def testWixExcelDataRead():
-    df = pd.read_excel('Users_OrdersUploads/'+'d2c771_2b911bcd1cd44994921d1a62c8468391-wixCN23_Test_amazon.xlsx')
-    #print(df.columns)
+            if not os.path.exists(CN23_OutPath + '/' + wixUserEmail + '/'):
+                os.makedirs(CN23_OutPath + '/' + wixUserEmail + '/')
 
-    userId = '123456789'
-    dataSender = {'Name': 'Alexander Belles', 'VAT': 'GR997728048', 'Business': 'Phonograph', 'Street': 'Poseidwnos',
-                  'TelNo': '2109090900', 'PostCode': '18479', 'City': 'Athens', 'Country': 'Greece'}
+            wixQuery = i['userInfoQuery']
+            querySplit = wixQuery.split('~')
+            wixDataSender = {'Name': querySplit[0], 'VAT': querySplit[2], 'Business': querySplit[1], 'Street': querySplit[3],
+                          'TelNo': querySplit[4], 'PostCode': querySplit[5], 'City': querySplit[6], 'Country': querySplit[7]}
 
-    for index, row in df.iterrows():
-        print(index+1, df['buyer-name'].size)
+            wixField = i['field'].split('/')
+            urllib.request.urlretrieve('https://static.wixstatic.com/ugd/' + wixField[-2], ParentPath + '/' + wixUserEmail + '/' + wixField[-2].split('.')[0] + '-' + wixField[-1])
+        #except:
+        #    pass
 
-        dataReceiver = {'Name': str(row['buyer-name']), 'Business': str(row['buyer-name']), 'Street': str(row['ship-address-1']),
-                    'TelNo': str(row['buyer-phone-number']), 'PostCode': str(row['ship-postal-code']), 'City': str(row['ship-city']), 'Country': str(row['ship-country'])}
-        dataProductsInfo = {'prodDescription': str(row['product-name']), 'prodQuantity': str(row['quantity-purchased']), 'prodWeight': 'None' + ' ' + 'kg',
-                        'prodValue': str(row['currency']) + ' ' + str(row['item-price']), 'prodHSTarif': '', 'prodCountryOfOrigin': str(row['ship-country'])}
-        dataProductCategory = 'x'
-        dataComments = '-'
-        dataLicense = '-'
-        dataCertificate = '-'
-        dataInvoice = {'tick': 'x', 'val': 'INV000'+str(index+1)}
+    print('Done with Data Requesting / Storing and Formatting from Wix DB')
+    parseOrders(userId, wixDataSender, wixUserEmail)
 
-        cn23_dataIn = [dataSender, dataReceiver, dataProductsInfo, dataProductCategory, dataComments, dataLicense, dataCertificate, dataInvoice]
+    #jsonfiles = json.loads(df0.to_json(orient='records'))
+    #return jsonify({'jsonfiles': jsonfiles})
 
-        CN23_PDF(userId, str(index), cn23_dataIn)
-        break
+def parseOrders(userId, dataSender, wixUserEmail):
 
-def CN23_PDF(userId, cn23_idx, dataIn):
+    for folder in os.walk(ParentPath + '/' + wixUserEmail):
+        files = folder[-1]
+        for f in files:
+            print(ParentPath + '/' + wixUserEmail + '/' + f)
+            df = pd.read_excel(ParentPath + '/' + wixUserEmail + '/' + f)
+
+            for index, row in df.iterrows():
+                print(index+1, df.iloc[:, 0].size)
+
+                #amazon
+                if df.columns[0] == 'order-id':
+                    dataReceiver = {'Name': str(row['buyer-name']), 'Business': str(row['buyer-name']), 'Street': str(row['ship-address-1']),
+                                'TelNo': str(row['buyer-phone-number']), 'PostCode': str(row['ship-postal-code']), 'City': str(row['ship-city']), 'Country': str(row['ship-country'])}
+                    dataProductsInfo = {'prodDescription': str(row['product-name']), 'prodQuantity': str(row['quantity-purchased']), 'prodWeight': str(row['Product Weight']).replace(',', '.') + ' ' + 'kg',
+                                    'prodValue': str(row['currency']) + ' ' + str(row['item-price']), 'prodHSTarif': str(row['HS']), 'prodCountryOfOrigin': str(row['ship-country'])}
+                    marketplace = 'amazon'
+                #ebay
+                elif df.columns[0] == 'Sales record number':
+                    dataReceiver = {'Name': str(row['Buyer full name']), 'Business': str(row['Buyer full name']), 'Street': str(row['Delivery address 1']),
+                                    'TelNo': str(row['Phone']), 'PostCode': str(row['Delivery postcode']), 'City': str(row['Delivery city']), 'Country': str(row['Delivery country'])}
+                    dataProductsInfo = {'prodDescription': str(row['Item title']), 'prodQuantity': str(row['Quantity']),
+                                        'prodWeight': str(row['Product Weight']).replace(',', '.'), 'prodValue': str(row['Total price']), 'prodHSTarif': str(row['HS']),
+                                        'prodCountryOfOrigin': 'Greece'}
+                    marketplace = 'ebay'
+
+                dataProductCategory = 'x'
+                dataComments = '-'
+                dataLicense = '-'
+                dataCertificate = '-'
+                dataInvoice = {'tick': 'x', 'val': str(row['User Invoice Number'])}
+
+                cn23_dataIn = [dataSender, dataReceiver, dataProductsInfo, dataProductCategory, dataComments, dataLicense, dataCertificate, dataInvoice]
+                CN23_PDF(wixUserEmail, marketplace, str(index), cn23_dataIn)
+
+                break
+
+def CN23_PDF(userEmail, MarketPlaceId, cn23_idx, dataIn):
 
     dataSender = dataIn[0]; dataReceiver = dataIn[1]
     dataProductsInfo = dataIn[2]; dataProductCategory = dataIn[3]
@@ -99,6 +137,8 @@ def CN23_PDF(userId, cn23_idx, dataIn):
     print(len(dataProductsInfo['prodDescription']))
     if len(dataProductsInfo['prodDescription']) > 25 and len(dataProductsInfo['prodDescription']) < 30:
         can.setFont('Vera', fontSettings[1])
+    elif len(dataProductsInfo['prodDescription']) > 25 and len(dataProductsInfo['prodDescription']) < 30:
+        can.setFont('Vera', fontSettings[1])
     elif len(dataProductsInfo['prodDescription']) > 30 and len(dataProductsInfo['prodDescription']) < 40:
         can.setFont('Vera', fontSettings[2])
     elif len(dataProductsInfo['prodDescription']) > 40 and len(dataProductsInfo['prodDescription']) < 80:
@@ -111,29 +151,29 @@ def CN23_PDF(userId, cn23_idx, dataIn):
     can.drawString(310, 618, dataProductsInfo['prodValue'])
     can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
     can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
-    """
+    
     '2nd Product info'
-    can.drawString(54, 618, dataProductsInfo['prodDescription'])
-    can.drawString(204, 618, dataProductsInfo['prodQuantity'])
-    can.drawString(250, 618, dataProductsInfo['prodWeight'])
-    can.drawString(320, 618, dataProductsInfo['prodValue'])
-    can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
-    can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
+    #can.drawString(54, 618, dataProductsInfo['prodDescription'])
+    #can.drawString(204, 618, dataProductsInfo['prodQuantity'])
+    #can.drawString(250, 618, dataProductsInfo['prodWeight'])
+    #can.drawString(320, 618, dataProductsInfo['prodValue'])
+    #can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
+    #can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
     '3rd Product info'
-    can.drawString(54, 618, dataProductsInfo['prodDescription'])
-    can.drawString(204, 618, dataProductsInfo['prodQuantity'])
-    can.drawString(250, 618, dataProductsInfo['prodWeight'])
-    can.drawString(320, 618, dataProductsInfo['prodValue'])
-    can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
-    can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
+    #can.drawString(54, 618, dataProductsInfo['prodDescription'])
+    #can.drawString(204, 618, dataProductsInfo['prodQuantity'])
+    #can.drawString(250, 618, dataProductsInfo['prodWeight'])
+    #can.drawString(320, 618, dataProductsInfo['prodValue'])
+    #can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
+    #can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
     '4th Product info'
-    can.drawString(54, 618, dataProductsInfo['prodDescription'])
-    can.drawString(204, 618, dataProductsInfo['prodQuantity'])
-    can.drawString(250, 618, dataProductsInfo['prodWeight'])
-    can.drawString(320, 618, dataProductsInfo['prodValue'])
-    can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
-    can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
-    """
+    #can.drawString(54, 618, dataProductsInfo['prodDescription'])
+    #can.drawString(204, 618, dataProductsInfo['prodQuantity'])
+    #can.drawString(250, 618, dataProductsInfo['prodWeight'])
+    #can.drawString(320, 618, dataProductsInfo['prodValue'])
+    #can.drawString(370, 618, dataProductsInfo['prodHSTarif'])
+    #can.drawString(470, 618, dataProductsInfo['prodCountryOfOrigin'])
+    
     'Product Comments'
     can.drawString(54, 502, dataComments)
     'Product Category'
@@ -155,9 +195,24 @@ def CN23_PDF(userId, cn23_idx, dataIn):
     page.mergePage(new_pdf.getPage(0))
     output.addPage(page)
     # finally, write "output" to a real file
-    outputStream = open("CN23_Out/"+userId+"-"+cn23_idx+"-CN23.pdf", "wb")
+    outputStream = open(CN23_OutPath + '/' + userEmail + '/' + MarketPlaceId + '-' + cn23_idx + "-CN23.pdf", "wb")
     output.write(outputStream)
     outputStream.close()
 
-#fetchWixDB()
-testWixExcelDataRead()
+def sendGridEmail():
+
+    client = sendgrid.SendGridClient("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")
+    message = sendgrid.Mail()
+
+    message.add_to("gekko1990@gmail.com")
+    message.set_from("gekko1990@gmail.com")
+    message.set_subject('CN23')
+    message.set_html("Click the Link to download the CN23 PDFs! : " + 'https://s21.q4cdn.com/374334112/files/doc_downloads/test.pdf')
+
+    client.send(message)
+
+#if __name__ == '__main__':
+#    app.run(debug=True, port=2000)
+
+#fetchWixData('50d16d4b6a84952cd160c461b4aafd92409427cdf47d17c89c004f3c0cf332426ef75ca954115ef6b4ca79a7f9e694911e60994d53964e647acf431e4f798bcd5df106f0a689304605995f23566f925e02c1cb1fbfd9d63a2968755a2cf81e5d')
+sendGridEmail()
