@@ -1,13 +1,12 @@
-import xmlschema
+import xmlschema, os
 from pprint import pprint
 
-my_schema = xmlschema.XMLSchema('CC504A.xsd')
+basePath = os.path.realpath('IcisNet Msges')
 
-print(my_schema)
+my_schema = xmlschema.XMLSchema(basePath+ '/CC504A.xsd')
+print(my_schema.is_valid(basePath+'/CC504A.xml'))
 
 """
-print(my_schema.is_valid('CC504A.xml'))
-
 my_schema.is_valid('xmlschema/tests/cases/examples/vehicles/vehicles-1_error.xml')
 
 my_schema.validate('xmlschema/tests/cases/examples/vehicles/vehicles-1_error.xml')
