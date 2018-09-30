@@ -100,7 +100,7 @@ class GenXML:
     # put all defined namespaces as a string
     def ns_map_str(self):
         ns_all = ''
-        for k, v in self.xsd.namespaces.iteritems():
+        for k, v in self.xsd.namespaces.items():
             if k == '':
                 continue
             else:
@@ -164,7 +164,8 @@ class GenXML:
     def node2xml(self, node):
         if node.min_occurs == 0:
             print('<!--next 1 item is optional (minOcuurs = 0)-->')
-        if node.max_occurs >  1:
+        #if node.max_occurs > 1:
+        else:
             print('<!--next 1 item is multiple (maxOccurs > 1)-->')
         
         if isinstance(node, XsdAnyElement):
@@ -216,7 +217,7 @@ class GenXML:
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument("-s", "--schema", dest="xsdfile", required=True, 
+    parser.add_argument("-s", "--schema", dest="xsdfile", required=True,
                         help="select the xsd used to generate xml")
     parser.add_argument("-e", "--element", dest="element", required=True,
                         help="select an element to dump xml")
@@ -228,10 +229,10 @@ def main():
     generator = GenXML(args.xsdfile, args.element, args.enable_choice)
     generator.run()
 
-
-
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
     
-    
+generator = GenXML('test.xsd', 'root', True)
+#generator = GenXML('CC515A.xsd', 'CC515A', True)
+generator.run()
 

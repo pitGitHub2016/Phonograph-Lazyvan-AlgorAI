@@ -1,41 +1,50 @@
-from lxml import etree, objectify
-from lxml.etree import XMLSyntaxError
-
-def xml_validator(some_xml_string, xsd_file='/path/to/my_schema_file.xsd'):
-    try:
-        schema = etree.XMLSchema(file=xsd_file)
-        parser = objectify.makeparser(schema=schema)
-        objectify.fromstring(some_xml_string, parser)
-        print "YEAH!, my xml file has validated"
-    except XMLSyntaxError:
-        #handle exception here
-        print "Oh NO!, my xml file does not validate"
-        pass
-
-xml_file = open('my_xml_file.xml', 'r')
-xml_string = xml_file.read()
-xml_file.close()
-
-xml_validator(xml_string, '/path/to/my_schema_file.xsd')
-
-"""
 import xmlschema, os
 from pprint import pprint
+import xml.etree.ElementTree as ET
+from xml.etree import ElementTree as et
 
-schema_xsd = open('CC504A.xsd').read()
-schema = xmlschema.XMLSchema(schema_xsd)
+xmlFile = "CC515A_Intrasoft_Submission_As_String_Case_Edit.xml"
 
-print(schema.types)
-pprint(dict(schema.elements))
-print(schema.attributes)
-pprint(sorted(schema.maps.types.keys())[:5])
-pprint(sorted(schema.maps.elements.keys())[:10])
+def xml_Read_Validate(xmlFile):
+    xsdFile = 'CC515A.xsd'
+    #xsdFile = 'test.xsd'; xmlFile = 'test.xml'
 
-#///////////////////////////////////////////
-my_schema.is_valid('xmlschema/tests/cases/examples/vehicles/vehicles-1_error.xml')
+    schema_xsd = open(xsdFile).read()
+    schema = xmlschema.XMLSchema(schema_xsd)
 
-my_schema.validate('xmlschema/tests/cases/examples/vehicles/vehicles-1_error.xml')
+    """
+    print('schema types : ' + 100*'%')
+    print(schema.types)
+    print('dict: schema elements'+ 100*'%')
+    pprint(dict(schema.elements))
+    print('schema attributes'+ 100*'%')
+    print(schema.attributes)
+    print('more'+ 100*'%')
+    pprint(sorted(schema.maps.types.keys())[:5])
+    pprint(sorted(schema.maps.elements.keys())[:10])
+    """
 
-xs = xmlschema.XMLSchema('xmlschema/tests/cases/examples/collection/collection.xsd')
-pprint(xs.to_dict('xmlschema/tests/cases/examples/collection/collection.xml'))
-"""
+    print(schema.is_valid(xmlFile))
+    pprint(schema.to_dict(xmlFile))
+
+def xml_Edit_Info():
+    """
+    tree = ET.parse(xmlFile)
+    a = tree.find('TRAEXPEX1')
+    for b in a.findall('NamEX17'):
+        if b.text.strip() == 'Gio':
+            break
+    else:
+        ET.SubElement(a, "NamEX17").text = "Gio"
+    tree.write(xmlFile)
+    """
+
+    tree = et.parse(xmlFile)
+    tree.find('.//NamTDE1').text = 'Giovanni'
+    tree.find('.//NamEX17').text = 'Rivaldo'
+    tree.write('Edited_' + xmlFile)
+
+    xml_Read_Validate('Edited_' + xmlFile)
+
+#xml_Read_Validate(xmlFile)
+xml_Edit_Info()

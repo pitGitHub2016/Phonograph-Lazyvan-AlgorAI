@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CC515A xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" >
+<SynIdeMES1>UNOC</SynIdeMES1>
+  <SynVerNumMES2>3</SynVerNumMES2>
+  <MesSenMES3>NTA.</MesSenMES3>
+  <MesRecMES6>NTA.</MesRecMES6>
+  <DatOfPreMES9>061129</DatOfPreMES9>
+  <TimOfPreMES10>1627</TimOfPreMES10>
+  <IntConRefMES11>XC51835466</IntConRefMES11>
+  <TesIndMES18>1</TesIndMES18>
+  <MesIdeMES19>1000000000</MesIdeMES19>
+  <MesTypMES20>CC515A</MesTypMES20>
+<HEAHEA>
+<!--START:[sequence]-->
+<!--next 40 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RefNumHEA4>1538146629023</RefNumHEA4>
+<TypOfDecHEA24>TIR</TypOfDecHEA24>
+<CouOfDesCodHEA30>US</CouOfDesCodHEA30>
+<TypOfDecBx12HEA651>A</TypOfDecBx12HEA651>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AgrLocOfGooCodHEA38>01/0102/24</AgrLocOfGooCodHEA38>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AgrLocOfGooHEA39>phonograph</AgrLocOfGooHEA39>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfDisCodHEA55>GR</CouOfDisCodHEA55>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<InlTraModHEA75>3</InlTraModHEA75>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TraModAtBorHEA76>4</TraModAtBorHEA76>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraAtDHEA78>BCS7837</IdeOfMeaOfTraAtDHEA78>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraAtDHEA78LNG>DE</IdeOfMeaOfTraAtDHEA78LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraCroHEA85>BCS7837</IdeOfMeaOfTraCroHEA85>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraCroHEA85LNG>EN</IdeOfMeaOfTraCroHEA85LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NatOfMeaOfTraCroHEA87>DE</NatOfMeaOfTraCroHEA87>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ConIndHEA96>0</ConIndHEA96>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DiaLanIndAtDepHEA254>EL</DiaLanIndAtDepHEA254>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ECSAccDocHEA601>EL</ECSAccDocHEA601>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TotNumOfIteHEA305>1</TotNumOfIteHEA305>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotNumOfPacHEA306>1</TotNumOfPacHEA306>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotGroMasHEA307>0.5</TotGroMasHEA307>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DecDatHEA383>28092018</DecDatHEA383>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DecPlaHEA394>ΤΕΛΩΝΕΙΟ ΑΘΗΝΩΝ</DecPlaHEA394>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DecPlaHEA394LNG>EL</DecPlaHEA394LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComRefNumHEA>111-4334477-4653022</ComRefNumHEA>
+</HEAHEA>
+<TRAEXPEX1>
+<!--START:[sequence]-->
+<!--next 8 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamEX17>PHONOGRAPH ΕΠΕ</NamEX17>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumEX122>ΛΕΩΦ. ΠΟΣΕΙΔΩΝΟΣ 93</StrAndNumEX122>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CitEX124>ΓΛΥΦΑΔΑ</CitEX124>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouEX125>GR</CouEX125>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NADLNGEX>EL</NADLNGEX>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINEX159>GR997728048</TINEX159>
+<!--END:[sequence]-->
+</TRAEXPEX1>
+<TRACONCE1>
+<!--START:[sequence]-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamCE17>Rina E Pitre</NamCE17>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumCE122>205 VALENTINE LN APT 2N</StrAndNumCE122>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CitCE124>YONKERS, NY</CitCE124>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouCE125>US</CouCE125>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NADLNGCE>EN</NADLNGCE>
+<!--END:[sequence]-->
+</TRACONCE1>
+<CUSOFFEXPERT>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RefNumERT1>GR000102</RefNumERT1>
+<!--END:[sequence]-->
+</CUSOFFEXPERT>
+<GOOITEGDS>
+<!--START:[sequence]-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GooDesGDS23>ΠΑΙΧΝΙΔΙΑ ΓΙΑ ΠΑΙΔΙΑ Barbie Made to Move Doll, Blue Top</GooDesGDS23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GroMasGDS46>0.5</GroMasGDS46>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<NetMasGDS48>0.2</NetMasGDS48>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ProReqGDI1>1000000</ProReqGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StaValAmoGDI1>48.8</StaValAmoGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfOriGDI1>GR</CouOfOriGDI1>
+<!--complex content-->
+<PREADMREFAR2>
+<!--START:[sequence]-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<PreDocCatPREADMREF21>Ζ380111-7504442-2643462</PreDocCatPREADMREF21>
+<!--END:[sequence]-->
+</PREADMREFAR2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<PRODOCDC2>
+<!--START:[sequence]-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DocTypDC21>N380</DocTypDC21>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DocRefDC23>111-7504442-2643462</DocRefDC23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DocRefDCLNG>EN</DocRefDCLNG>
+<!--END:[sequence]-->
+</PRODOCDC2>
+<!--complex content-->
+<COMCODGODITM>
+<!--START:[sequence]-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ComNomCMD1>9503003500409900000000</ComNomCMD1>
+<!--END:[sequence]-->
+</COMCODGODITM>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<PACGS2>
+<!--START:[sequence]-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<MarNumOfPacGS21>1431160076</MarNumOfPacGS21>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<MarNumOfPacGS21LNG>EN</MarNumOfPacGS21LNG>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<KinOfPacGS23>PC</KinOfPacGS23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NumOfPacGS24>1</NumOfPacGS24>
+<!--END:[sequence]-->
+</PACGS2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<GRN>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GrnNum1010></GrnNum1010>
+<!--END:[sequence]-->
+</GRN>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<VEHDET>
+<!--START:[sequence]-->
+<!--next 2 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<FraNumVD1014></FraNumVD1014>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CarWarNumVD1015></CarWarNumVD1015>
+<!--END:[sequence]-->
+</VEHDET>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<NATPRO>
+<!--START:[sequence]-->
+<!--next 3 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<WarNumNP1016></WarNumNP1016>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ProIdNP1017></ProIdNP1017>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ProQuaNP1018></ProQuaNP1018>
+<!--END:[sequence]-->
+</NATPRO>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<BASPRO>
+<!--START:[sequence]-->
+<!--next 3 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComCodBP1019></ComCodBP1019>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AddCodBP1020></AddCodBP1020>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<QuaBP1021></QuaBP1021>
+<!--END:[sequence]-->
+</BASPRO>
+<!--END:[sequence]-->
+</GOOITEGDS>
+<TRADEC>
+<!--START:[sequence]-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINTDE1>00400</TINTDE1>
+<!--END:[sequence]-->
+</TRADEC>
+<DELTER>
+<!--START:[sequence]-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<IncCodTDL1>FCA</IncCodTDL1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ComInfDELTER387>ΑΘΗΝΑ</ComInfDELTER387>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComInfDELTER387LNG>EN</ComInfDELTER387LNG>
+<!--END:[sequence]-->
+</DELTER>
+<TRADAT>
+<!--START:[sequence]-->
+<!--next 5 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CurTRD1>USD</CurTRD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotAmoInvTRD1>56.5</TotAmoInvTRD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ExcRatTRD1>1.1616</ExcRatTRD1>
+<!--END:[sequence]-->
+</TRADAT>
+<STATREP385>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RepStatCodSTATREP386>1</RepStatCodSTATREP386>
+<!--END:[sequence]-->
+</STATREP385>
+</CC515A>

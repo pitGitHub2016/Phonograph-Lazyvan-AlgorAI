@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<CC515A xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" >
+<!--START:[sequence]-->
+<!--next 16 items are in a [sequence] group-->
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--START:[sequence]-->
+<!--next 19 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<SynIdeMES1>UNOC</SynIdeMES1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<SynVerNumMES2></SynVerNumMES2>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<MesSenMES3></MesSenMES3>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SenIdeCodQuaMES4></SenIdeCodQuaMES4>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<MesRecMES6></MesRecMES6>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<RecIdeCodQuaMES7></RecIdeCodQuaMES7>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DatOfPreMES9></DatOfPreMES9>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TimOfPreMES10></TimOfPreMES10>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<IntConRefMES11></IntConRefMES11>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<RecRefMES12></RecRefMES12>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<RecRefQuaMES13></RecRefQuaMES13>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AppRefMES14></AppRefMES14>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PriMES15></PriMES15>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AckReqMES16></AckReqMES16>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComAgrIdMES17></ComAgrIdMES17>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TesIndMES18></TesIndMES18>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<MesIdeMES19></MesIdeMES19>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<MesTypMES20></MesTypMES20>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComAccRefMES21></ComAccRefMES21>
+<!--END:[sequence]-->
+<!--END:[sequence]-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<HEAHEA>
+<!--START:[sequence]-->
+<!--next 40 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RefNumHEA4></RefNumHEA4>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TypOfDecHEA24></TypOfDecHEA24>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfDesCodHEA30></CouOfDesCodHEA30>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AgrLocOfGooCodHEA38></AgrLocOfGooCodHEA38>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AgrLocOfGooHEA39></AgrLocOfGooHEA39>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AgrLocOfGooHEA39LNG></AgrLocOfGooHEA39LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AutLocOfGooCodHEA41></AutLocOfGooCodHEA41>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfDisCodHEA55></CouOfDisCodHEA55>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CusSubPlaHEA66></CusSubPlaHEA66>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<InlTraModHEA75></InlTraModHEA75>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TraModAtBorHEA76></TraModAtBorHEA76>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraAtDHEA78></IdeOfMeaOfTraAtDHEA78>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraAtDHEA78LNG></IdeOfMeaOfTraAtDHEA78LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraCroHEA85></IdeOfMeaOfTraCroHEA85>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeOfMeaOfTraCroHEA85LNG></IdeOfMeaOfTraCroHEA85LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NatOfMeaOfTraCroHEA87></NatOfMeaOfTraCroHEA87>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TypOfMeaOfTraCroHEA88></TypOfMeaOfTraCroHEA88>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ConIndHEA96></ConIndHEA96>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AccDatHEA158></AccDatHEA158>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DiaLanIndAtDepHEA254></DiaLanIndAtDepHEA254>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ECSAccDocHEA601></ECSAccDocHEA601>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TotNumOfIteHEA305></TotNumOfIteHEA305>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotNumOfPacHEA306></TotNumOfPacHEA306>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotGroMasHEA307></TotGroMasHEA307>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DecDatHEA383></DecDatHEA383>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DecPlaHEA394></DecPlaHEA394>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DecPlaHEA394LNG></DecPlaHEA394LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SpeCirIndHEA1></SpeCirIndHEA1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TraChaMetOfPayHEA1></TraChaMetOfPayHEA1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComRefNumHEA></ComRefNumHEA>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GraTotTaxAmoHEA1></GraTotTaxAmoHEA1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TypOfDecBx12HEA651></TypOfDecBx12HEA651>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PlaLoaGOOITE334></PlaLoaGOOITE334>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ECSAccDocDatHEA1023></ECSAccDocDatHEA1023>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AddDecDatHEA1024></AddDecDatHEA1024>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TIRFolHEA1025></TIRFolHEA1025>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<FinBanInfHEA1027></FinBanInfHEA1027>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ManEntNumHEA1028></ManEntNumHEA1028>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ManEntYeaHEA1029></ManEntYeaHEA1029>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<LoadingDts>
+<!--START:[sequence]-->
+<!--next 2 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<LoadingBegDateHEA></LoadingBegDateHEA>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<LoadingEndDat></LoadingEndDat>
+<!--END:[sequence]-->
+</LoadingDts>
+<!--END:[sequence]-->
+</HEAHEA>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<TRAEXPEX1>
+<!--START:[sequence]-->
+<!--next 8 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamEX17></NamEX17>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumEX122></StrAndNumEX122>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PosCodEX123></PosCodEX123>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CitEX124></CitEX124>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouEX125></CouEX125>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NADLNGEX></NADLNGEX>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINEX159></TINEX159>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SpeMenEX1011></SpeMenEX1011>
+<!--END:[sequence]-->
+</TRAEXPEX1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<TRACONCE1>
+<!--START:[sequence]-->
+<!--next 8 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamCE17></NamCE17>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumCE122></StrAndNumCE122>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PosCodCE123></PosCodCE123>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CitCE124></CitCE124>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouCE125></CouCE125>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NADLNGCE></NADLNGCE>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINCE159></TINCE159>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SpeMenCE1003></SpeMenCE1003>
+<!--END:[sequence]-->
+</TRACONCE1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<CUSOFFEXPERT>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RefNumERT1></RefNumERT1>
+<!--END:[sequence]-->
+</CUSOFFEXPERT>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<CUSOFFEXIEXT>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RefNumEXT1></RefNumEXT1>
+<!--END:[sequence]-->
+</CUSOFFEXIEXT>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<CONRESERS>
+<!--START:[sequence]-->
+<!--next 2 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ConResCodERS16></ConResCodERS16>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DatLimERS69></DatLimERS69>
+<!--END:[sequence]-->
+</CONRESERS>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<SEAINFSLI>
+<!--START:[sequence]-->
+<!--next 2 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<SeaNumSLI2></SeaNumSLI2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<SEAIDSID>
+<!--START:[sequence]-->
+<!--next 2 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<SeaIdeSID1></SeaIdeSID1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SeaIdeSID1LNG></SeaIdeSID1LNG>
+<!--END:[sequence]-->
+</SEAIDSID>
+<!--END:[sequence]-->
+</SEAINFSLI>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<GOOITEGDS>
+<!--START:[sequence]-->
+<!--next 39 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<IteNumGDS7></IteNumGDS7>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GooDesGDS23></GooDesGDS23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GooDesGDS23LNG></GooDesGDS23LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GroMasGDS46></GroMasGDS46>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<NetMasGDS48></NetMasGDS48>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfDisGDS58></CouOfDisGDS58>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfDesGDS59></CouOfDesGDS59>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<MetOfPayGDI12></MetOfPayGDI12>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ProReqGDI1></ProReqGDI1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<PreProGDI1></PreProGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComNatProGIM1></ComNatProGIM1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StaValCurGDI1></StaValCurGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StaValAmoGDI1></StaValAmoGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouOfOriGDI1></CouOfOriGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DisProRegGDI1></DisProRegGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SupUniGDI1></SupUniGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotIteTaxAmoGDI1></TotIteTaxAmoGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComRefNumGIM1></ComRefNumGIM1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<UNDanGooCodGDI1></UNDanGooCodGDI1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeMeaTraDepGDS1030></IdeMeaTraDepGDS1030>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeMeaTraDepGDS1030LNG></IdeMeaTraDepGDS1030LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeMeaTraCroBorGDS1031></IdeMeaTraCroBorGDS1031>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<IdeMeaTraCroBorGDS1031LNG></IdeMeaTraCroBorGDS1031LNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NatMeaTraCroBorGDS1032></NatMeaTraCroBorGDS1032>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TypMeaTraCroBorGDS1033></TypMeaTraCroBorGDS1033>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ProReqEndDat4003></ProReqEndDat4003>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<PREADMREFAR2>
+<!--START:[sequence]-->
+<!--next 11 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<PreDocTypAR21></PreDocTypAR21>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocRefAR26></PreDocRefAR26>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocRefLNG></PreDocRefLNG>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<PreDocCatPREADMREF21></PreDocCatPREADMREF21>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocMrnAR1004></PreDocMrnAR1004>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocIteAR1005></PreDocIteAR1005>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocQuaAR1006></PreDocQuaAR1006>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocSupAR1007></PreDocSupAR1007>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocSumDecPacAR1035></PreDocSumDecPacAR1035>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocBilOfLadTyp10></PreDocBilOfLadTyp10>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PreDocBilOfLadNum11></PreDocBilOfLadNum11>
+<!--END:[sequence]-->
+</PREADMREFAR2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<PRODOCDC2>
+<!--START:[sequence]-->
+<!--next 5 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DocTypDC21></DocTypDC21>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<DocRefDC23></DocRefDC23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DocRefDCLNG></DocRefDCLNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DocInfDC1008></DocInfDC1008>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<DocInfDC1008LNG></DocInfDC1008LNG>
+<!--END:[sequence]-->
+</PRODOCDC2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<SPEMENMT2>
+<!--START:[sequence]-->
+<!--next 3 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<AddInfCodMT23></AddInfCodMT23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TexSPM1></TexSPM1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TexSPM1LNG></TexSPM1LNG>
+<!--END:[sequence]-->
+</SPEMENMT2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<TRACONEX2>
+<!--START:[sequence]-->
+<!--next 7 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamEX27></NamEX27>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumEX222></StrAndNumEX222>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PosCodEX223></PosCodEX223>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CitEX224></CitEX224>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouEX225></CouEX225>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NADLNGGTEX></NADLNGGTEX>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINEX259></TINEX259>
+<!--END:[sequence]-->
+</TRACONEX2>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<COMCODGODITM>
+<!--START:[sequence]-->
+<!--next 5 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ComNomCMD1></ComNomCMD1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TARCodCMD1></TARCodCMD1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TARFirAddCodCMD1></TARFirAddCodCMD1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TARSecAddCodCMD1></TARSecAddCodCMD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NAtAddCodCMD1></NAtAddCodCMD1>
+<!--END:[sequence]-->
+</COMCODGODITM>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<CALTAXGOD>
+<!--START:[sequence]-->
+<!--next 5 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TypOfTaxCTX1></TypOfTaxCTX1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<TaxBasCTX1></TaxBasCTX1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RatOfTaxCTX1></RatOfTaxCTX1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<AmoOfTaxTCL1></AmoOfTaxTCL1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<MetOfPayCTX1></MetOfPayCTX1>
+<!--END:[sequence]-->
+</CALTAXGOD>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<TRACONCE2>
+<!--START:[sequence]-->
+<!--next 7 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamCE27></NamCE27>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumCE222></StrAndNumCE222>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PosCodCE223></PosCodCE223>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CitCE224></CitCE224>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouCE225></CouCE225>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NADLNGGICE></NADLNGGICE>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINCE259></TINCE259>
+<!--END:[sequence]-->
+</TRACONCE2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<CONNR2>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ConNumNR21></ConNumNR21>
+<!--END:[sequence]-->
+</CONNR2>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<PACGS2>
+<!--START:[sequence]-->
+<!--next 5 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<MarNumOfPacGS21></MarNumOfPacGS21>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<MarNumOfPacGS21LNG></MarNumOfPacGS21LNG>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<KinOfPacGS23></KinOfPacGS23>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NumOfPacGS24></NumOfPacGS24>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NumOfPieGS25></NumOfPieGS25>
+<!--END:[sequence]-->
+</PACGS2>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<GRN>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<GrnNum1010></GrnNum1010>
+<!--END:[sequence]-->
+</GRN>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<VEHDET>
+<!--START:[sequence]-->
+<!--next 2 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<FraNumVD1014></FraNumVD1014>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CarWarNumVD1015></CarWarNumVD1015>
+<!--END:[sequence]-->
+</VEHDET>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<NATPRO>
+<!--START:[sequence]-->
+<!--next 3 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<WarNumNP1016></WarNumNP1016>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ProIdNP1017></ProIdNP1017>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ProQuaNP1018></ProQuaNP1018>
+<!--END:[sequence]-->
+</NATPRO>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<BASPRO>
+<!--START:[sequence]-->
+<!--next 3 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComCodBP1019></ComCodBP1019>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AddCodBP1020></AddCodBP1020>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<QuaBP1021></QuaBP1021>
+<!--END:[sequence]-->
+</BASPRO>
+<!--END:[sequence]-->
+</GOOITEGDS>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<ITI>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<CouOfRouCodITI1></CouOfRouCodITI1>
+<!--END:[sequence]-->
+</ITI>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<TRADEC>
+<!--START:[sequence]-->
+<!--next 8 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NamTDE1></NamTDE1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<StrAndNumTDE1></StrAndNumTDE1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<PosCodTDE1></PosCodTDE1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CiTDE1></CiTDE1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CouCodTDE1></CouCodTDE1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TRADECLNG></TRADECLNG>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TINTDE1></TINTDE1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<SpeMenTDE1022></SpeMenTDE1022>
+<!--END:[sequence]-->
+</TRADEC>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<DELTER>
+<!--START:[sequence]-->
+<!--next 4 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<IncCodTDL1></IncCodTDL1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComCodTDL1></ComCodTDL1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<ComInfDELTER387></ComInfDELTER387>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ComInfDELTER387LNG></ComInfDELTER387LNG>
+<!--END:[sequence]-->
+</DELTER>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<TRADAT>
+<!--START:[sequence]-->
+<!--next 5 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<CurTRD1></CurTRD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<TotAmoInvTRD1></TotAmoInvTRD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<ExcRatTRD1></ExcRatTRD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NatOfTraFirCodTRD1></NatOfTraFirCodTRD1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<NatOfTraSecCodTRD1></NatOfTraSecCodTRD1>
+<!--END:[sequence]-->
+</TRADAT>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<DEFPOSPAY>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<AutRefDPP1></AutRefDPP1>
+<!--END:[sequence]-->
+</DEFPOSPAY>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<!--complex content-->
+<IDEWAR>
+<!--START:[sequence]-->
+<!--next 3 items are in a [sequence] group-->
+<!--next 1 item is optional (minOcuurs = 0)-->
+<WarTypWID1></WarTypWID1>
+<!--next 1 item is optional (minOcuurs = 0)-->
+<AutCouWID1></AutCouWID1>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<WarIdeWARIDE19></WarIdeWARIDE19>
+<!--END:[sequence]-->
+</IDEWAR>
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<!--complex content-->
+<STATREP385>
+<!--START:[sequence]-->
+<!--next 1 items are in a [sequence] group-->
+<!--next 1 item is multiple (maxOccurs > 1)-->
+<RepStatCodSTATREP386></RepStatCodSTATREP386>
+<!--END:[sequence]-->
+</STATREP385>
+<!--END:[sequence]-->
+</CC515A>

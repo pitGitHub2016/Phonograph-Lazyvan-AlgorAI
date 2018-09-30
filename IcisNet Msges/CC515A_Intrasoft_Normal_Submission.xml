@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CC515A xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" >
+<MesIdeMES19>u0GtyKeqBmzbS6</MesIdeMES19>
+   <HEAHEA>
+      <RefNumHEA4>CC315.997646</RefNumHEA4>
+      <TraModAtBorHEA76>1</TraModAtBorHEA76>
+      <IdeOfMeaOfTraCroHEA85>0000555</IdeOfMeaOfTraCroHEA85>
+      <IdeOfMeaOfTraCroHEA85LNG>MK</IdeOfMeaOfTraCroHEA85LNG>
+      <TotNumOfIteHEA305>1</TotNumOfIteHEA305>
+      <TotNumOfPacHEA306>2</TotNumOfPacHEA306>
+      <TotGroMasHEA307>3.0</TotGroMasHEA307>
+      <DecPlaHEA394>hereandthere</DecPlaHEA394>
+      <DecPlaHEA394LNG>MK</DecPlaHEA394LNG>
+      <ComRefNumHEA>updated</ComRefNumHEA>
+      <ConRefNumHEA>341242fssdf</ConRefNumHEA>
+      <PlaLoaGOOITE334>IT2345ASDGR</PlaLoaGOOITE334>
+      <PlaLoaGOOITE334LNG>MK</PlaLoaGOOITE334LNG>
+      <PlaUnlGOOITE334>IT2345ASDFF</PlaUnlGOOITE334>
+      <CodPlUnHEA357LNG>MK</CodPlUnHEA357LNG>
+      <DecDatTimHEA114>201402131148</DecDatTimHEA114>
+   </HEAHEA>
+   <TRACONCO1>
+      <NamCO17>LEONIDAS</NamCO17>
+      <StrAndNumCO122>167, CHOCOLATE AV FBG51U3</StrAndNumCO122>
+      <PosCodCO123>18541</PosCodCO123>
+      <CitCO124>BRUSSELS</CitCO124>
+      <CouCO125>LU</CouCO125>
+      <NADLNGCO>MK</NADLNGCO>
+      <TINCO159>MK455511111145811</TINCO159>
+   </TRACONCO1>
+   <GOOITEGDS>
+      <IteNumGDS7>1</IteNumGDS7>
+      <GooDesGDS23>dfgsdfgdfg</GooDesGDS23>
+      <GooDesGDS23LNG>MK</GooDesGDS23LNG>
+      <GroMasGDS46>3</GroMasGDS46>
+      <ComRefNumGIM1>updated</ComRefNumGIM1>
+      <PACGS2>
+         <KinOfPacGS23>DC</KinOfPacGS23>
+         <NumOfPacGS24>2</NumOfPacGS24>
+         <MarNumOfPacGSL21>dsfdfg4tg35</MarNumOfPacGSL21>
+         <MarNumOfPacGSL21LNG>MK</MarNumOfPacGSL21LNG>
+      </PACGS2>
+   </GOOITEGDS>
+   <ITI>
+      <CouOfRouCodITI1>GR</CouOfRouCodITI1>
+   </ITI>
+   <ITI>
+      <CouOfRouCodITI1>FR</CouOfRouCodITI1>
+   </ITI>
+   <PERLODSUMDEC>
+      <PERLODSUMDECLNG>MK</PERLODSUMDECLNG>
+      <TINPLD1>MK455511111145811</TINPLD1>
+   </PERLODSUMDEC>
+   <CUSOFFFENT730>
+      <RefNumCUSOFFFENT731>MK005010</RefNumCUSOFFFENT731>
+      <ExpDatOfArrFIRENT733>201402131148</ExpDatOfArrFIRENT733>
+   </CUSOFFFENT730>
+   <TRACARENT601>
+      <TRACARENT601LNG>MK</TRACARENT601LNG>
+      <TINTRACARENT602>MK455511111145811</TINTRACARENT602>
+   </TRACARENT601>
+</CC515A>
