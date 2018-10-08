@@ -66,15 +66,19 @@ def parseOrders(userId, dataSender, wixUserEmail):
                 if df.columns[0] == 'order-id':
                     dataReceiver = {'Name': str(row['buyer-name']), 'Business': str(row['buyer-name']), 'Street': str(row['ship-address-1']),
                                 'TelNo': str(row['buyer-phone-number']), 'PostCode': str(row['ship-postal-code']), 'City': str(row['ship-city']), 'Country': str(row['ship-country'])}
-                    dataProductsInfo = {'prodDescription': str(row['product-name']), 'prodQuantity': str(row['quantity-purchased']), 'prodWeight': str(row['Product Weight']).replace(',', '.') + ' ' + 'kg',
-                                    'prodValue': str(row['currency']) + ' ' + str(row['item-price']), 'prodHSTarif': str(row['HS']), 'prodCountryOfOrigin': str(row['ship-country'])}
+                    redProdDescr = row['product-name']
+                    prodPriceIn = "%.2f" % round(row['Price'],2)
+                    dataProductsInfo = {'prodDescription': str(redProdDescr[0:25]), 'prodQuantity': str(row['quantity-purchased']), 'prodWeight': str(row['Product Weight']).replace(',', '.') + ' ' + 'kg',
+                                    'prodValue': '€' + ' ' + str(prodPriceIn), 'prodHSTarif': str(row['HS']), 'prodCountryOfOrigin': 'Greece'}
                     marketplace = 'amazon'
                 #ebay
                 elif df.columns[0] == 'Sales record number':
                     dataReceiver = {'Name': str(row['Buyer full name']), 'Business': str(row['Buyer full name']), 'Street': str(row['Delivery address 1']),
                                     'TelNo': str(row['Phone']), 'PostCode': str(row['Delivery postcode']), 'City': str(row['Delivery city']), 'Country': str(row['Delivery country'])}
-                    dataProductsInfo = {'prodDescription': str(row['Item title']), 'prodQuantity': str(row['Quantity']),
-                                        'prodWeight': str(row['Product Weight']).replace(',', '.'), 'prodValue': str(row['Total price']), 'prodHSTarif': str(row['HS']),
+                    redProdDescr = row['Item title']
+                    prodPriceIn = "%.2f" % round(row['Total price'],2)
+                    dataProductsInfo = {'prodDescription': str(redProdDescr[0:25]), 'prodQuantity': str(row['Quantity']),
+                                        'prodWeight': str(row['Product Weight']).replace(',', '.'), 'prodValue': str(prodPriceIn), 'prodHSTarif': str(row['HS']),
                                         'prodCountryOfOrigin': 'Greece'}
                     marketplace = 'ebay'
 
@@ -87,7 +91,7 @@ def parseOrders(userId, dataSender, wixUserEmail):
                 cn23_dataIn = [dataSender, dataReceiver, dataProductsInfo, dataProductCategory, dataComments, dataLicense, dataCertificate, dataInvoice]
                 CN23_PDF(wixUserEmail, marketplace, str(index), cn23_dataIn)
 
-                break
+                #break
 
 def CN23_PDF(userEmail, MarketPlaceId, cn23_idx, dataIn):
 
@@ -135,13 +139,13 @@ def CN23_PDF(userEmail, MarketPlaceId, cn23_idx, dataIn):
     '1st Product info'
 
     print(len(dataProductsInfo['prodDescription']))
-    if len(dataProductsInfo['prodDescription']) > 25 and len(dataProductsInfo['prodDescription']) < 30:
+    if len(dataProductsInfo['prodDescription']) >= 20 and len(dataProductsInfo['prodDescription']) < 25:
         can.setFont('Vera', fontSettings[1])
-    elif len(dataProductsInfo['prodDescription']) > 25 and len(dataProductsInfo['prodDescription']) < 30:
+    elif len(dataProductsInfo['prodDescription']) >= 25 and len(dataProductsInfo['prodDescription']) < 30:
         can.setFont('Vera', fontSettings[1])
-    elif len(dataProductsInfo['prodDescription']) > 30 and len(dataProductsInfo['prodDescription']) < 40:
+    elif len(dataProductsInfo['prodDescription']) >= 30 and len(dataProductsInfo['prodDescription']) < 40:
         can.setFont('Vera', fontSettings[2])
-    elif len(dataProductsInfo['prodDescription']) > 40 and len(dataProductsInfo['prodDescription']) < 80:
+    elif len(dataProductsInfo['prodDescription']) >= 40 and len(dataProductsInfo['prodDescription']) < 80:
         can.setFont('Vera', fontSettings[3])
     can.drawString(54, 618, dataProductsInfo['prodDescription'])
 
@@ -215,4 +219,5 @@ def sendGridEmail():
 #    app.run(debug=True, port=2000)
 
 #fetchWixData('50d16d4b6a84952cd160c461b4aafd92409427cdf47d17c89c004f3c0cf332426ef75ca954115ef6b4ca79a7f9e694911e60994d53964e647acf431e4f798bcd5df106f0a689304605995f23566f925e02c1cb1fbfd9d63a2968755a2cf81e5d')
-sendGridEmail()
+fetchWixData('bf03dd816bf20d2dec142f9ba4e9cec682908a42145b0d17c57cc89498ca8770ec760030e230d62a29cf0b1c305a52861e60994d53964e647acf431e4f798bcd75fe9676af4e71b77777835b55c1c543ba2d300f6325b6d634ee736961ec9c5f')
+#sendGridEmail()
