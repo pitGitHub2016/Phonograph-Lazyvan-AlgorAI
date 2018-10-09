@@ -1,4 +1,4 @@
-import xmlschema, os, json
+import xmlschema, os, json, datetime
 from pprint import pprint
 import xml.etree.ElementTree as ET
 from xml.etree import ElementTree as et
@@ -55,39 +55,124 @@ def xml_Edit_Info_CC515A(xmlFile):
           'IncCodTDL1', 'ComInfDELTER387', 'ComInfDELTER387LNG', 'CurTRD1', 'TotAmoInvTRD1',
           'ExcRatTRD1', 'RepStatCodSTATREP386']
 
-    l2 = ['UNOC', '3', 'TRADER.GR', 'NXA.GR', '170726', '955', '1.50105E+12', '0', '1.50105E+12', 'CC515A',
-          '1.53856E+12', 'EX', 'CA', '01/0102/24', 'phonograph', 'GR', '3', '4', 'BCS7837', 'DE', 'BCS7837', 'EN',
-          'DE', '0', 'EL', 'EL', '1', '1', '1', '20181003', 'ΤΕΛΩΝΕΙΟ ΑΘΗΝΩΝ', 'EL', '701-9454426-6350649', 'C', '0',
-          'PHONOGRAPH ΕΠΕ', 'ΛΕΩΦ. ΠΟΣΕΙΔΩΝΟΣ 93', '16674', 'ΓΛΥΦΑΔΑ', 'GR', 'EL', 'GR997728048', 'Philip Santos',
-          '510 Goodale Drive.', 'R1N 3M3', 'Portage la Prairie, Manitoba', 'CA', 'EN', 'GR000102', 'GR000304', '1',
-          'ΠΑΙΧΝΙΔΙΑ Ubisoft Maria Ubisoft Aguilar', '1', '0.7', '10', '0', '0', '73.65', 'GR', '380',
-          '701-9454426-6350649', 'Z', 'N380', '701-9454426-6350649', 'EN''N705', '2647541433', 'EN', 'Y903', '-', 'EL', 'Y935', '-', 'EL',
-          '1961', '17GR000001SASP00038', 'EL', '95030035', '0', '4099', '0', '0', '2647541433', 'EN', 'PC', '1', '400',
-          'FCA', 'ΑΘΗΝΑ', 'EN', 'CAD', '111.4', '1.5126', '1']
+    'Get Orders'
+    dfTemplateOrder = pd.read_csv('templateOrders.csv', delimiter=',', encoding="cp1252")
+    print(dfTemplateOrder.columns)
 
-    df1 = pd.concat([pd.DataFrame(l1), pd.DataFrame(l2)], axis=1)
-    print(df1)
+    for index, row in dfTemplateOrder.iterrows():
+        print(index + 1, dfTemplateOrder.iloc[:, 0].size)
 
-    #tree.find('.//SynIdeMES1').text = 'Giovanni'
+        l2 = ['UNOC', '3', 'TRADER.GR', 'NXA.GR', '170726', '955', '1.50105E+12', '0', '1.50105E+12', 'CC515A',
 
-    #tree.write('Edited_' + xmlFile)
+              #'1.53856E+12',
+              'phonograph_Test',
+
+              'EX',
+              # 'CA',
+              str(row['product-name']),
+              '01/0102/24', 'phonograph', 'GR', '3', '4',
+              'BCS7837', 'DE', 'BCS7837', 'EN', 'DE', '0', 'EL', 'EL', '1', '1', '1',
+
+              # '20181003',
+              datetime.datetime.now().strftime("%Y%m%d"),
+
+              'ΤΕΛΩΝΕΙΟ ΑΘΗΝΩΝ', 'EL',
+
+              # '701-9454426-6350649',
+              str(row['order-id']),
+
+              'C', '0', 'PHONOGRAPH ΕΠΕ', 'ΛΕΩΦ. ΠΟΣΕΙΔΩΝΟΣ 93', '16674', 'ΓΛΥΦΑΔΑ', 'GR', 'EL', 'GR997728048',
+
+              # 'Philip Santos',
+              str(row['recipient-name']),
+              # '510 Goodale Drive.',
+              str(row['ship-address-1']),
+              # 'R1N 3M3',
+              str(row['ship-postal-code']),
+              # 'Portage la Prairie, Manitoba',
+              str(row['ship-city']),
+              # 'CA',
+              str(row['ship-country']),
+
+              'EN', 'GR000102', 'GR000304', '1',
+
+              # 'ΠΑΙΧΝΙΔΙΑ Ubisoft Maria Ubisoft Aguilar',
+              str(row['product-name']),
+              # '1',
+              str(row['GROS']),
+              # '0.7',
+              str(row['NET']),
+
+              '10', '0', '0',
+
+              # '73.65',
+              str(row['PRICE']),
+
+              'GR', '380',
+
+              # '701-9454426-6350649',
+              str(row['order-id']),
+
+              'Z', 'N380',
+
+              # '701-9454426-6350649',
+              str(row['order-id']),
+
+              'EN', 'N705',
+
+              # '2647541433',
+              str(row['TRACKING']),
+
+              'EN', 'Y903', '-', 'EL', 'Y935', '-', 'EL', '1961', '17GR000001SASP00038', 'EL',
+
+              # '95030035',
+              str(row['TARIC']),
+
+              '0', '4099', '0', '0',
+
+              # '2647541433',
+              str(row['TRACKING']),
+
+              'EN', 'PC', '1', '400', 'FCA', 'ΑΘΗΝΑ', 'EN',
+
+              # 'CAD',
+              str(row['currency']),
+
+              # '111.4',
+              str("%.2f" % round(row['item-price'] + row['item-tax'] + row['shipping-price'] + row['shipping-tax'], 2)),
+
+              # '1.5126',
+              str(row['eurConversion']),
+
+              '1']
+
+        if len(l1) == len(l2):
+            for i in range(len(l1)):
+                tree.find('.//' + l1[i]).text = l2[i]
+                tree.write(os.path.realpath('Output_Icisnet/') + '/' + str(row['order-id']) + '_' + xmlFile)
+        else:
+            print('Error Algomyth Icisnet Fill : l1 and l2 lists have different sizes! Cannot fill the fields ... check the input csv again! ... ')
 
     #xml_Read_Validate('Output_Icisnet/Edited_' + xmlFile)
 
 xsdFileIn = 'CC515A.xsd'
 xmlFileIn = "CC515A_Phonograph_Template_Submission.xml"
+xml_Edit_Info_CC515A(xmlFileIn)
 
-'Get Orders'
-df0 = pd.read_csv('templateOrders.csv',  delimiter=',', encoding = "cp1252")
-print(df0.columns)
-#xml_Edit_Info_CC515A(xmlFileIn)
-
+"""
+#Sample l2
 l2 = ['UNOC', '3', 'TRADER.GR', 'NXA.GR', '170726', '955', '1.50105E+12', '0', '1.50105E+12', 'CC515A',
-          '1.53856E+12', 'EX', 'CA', '01/0102/24', 'phonograph', 'GR', '3', '4', 'BCS7837', 'DE', 'BCS7837', 'EN',
-          'DE', '0', 'EL', 'EL', '1', '1', '1', '20181003', 'ΤΕΛΩΝΕΙΟ ΑΘΗΝΩΝ', 'EL', '701-9454426-6350649', 'C', '0',
-          'PHONOGRAPH ΕΠΕ', 'ΛΕΩΦ. ΠΟΣΕΙΔΩΝΟΣ 93', '16674', 'ΓΛΥΦΑΔΑ', 'GR', 'EL', 'GR997728048', 'Philip Santos',
-          '510 Goodale Drive.', 'R1N 3M3', 'Portage la Prairie, Manitoba', 'CA', 'EN', 'GR000102', 'GR000304', '1',
-          'ΠΑΙΧΝΙΔΙΑ Ubisoft Maria Ubisoft Aguilar', '1', '0.7', '10', '0', '0', '73.65', 'GR', '380',
-          '701-9454426-6350649', 'Z', 'N380', '701-9454426-6350649', 'EN''N705', '2647541433', 'EN', 'Y903', '-', 'EL', 'Y935', '-', 'EL',
-          '1961', '17GR000001SASP00038', 'EL', '95030035', '0', '4099', '0', '0', '2647541433', 'EN', 'PC', '1', '400',
-          'FCA', 'ΑΘΗΝΑ', 'EN', 'CAD', '111.4', '1.5126', '1']
+      '1.53856E+12', 'EX', 'CA', '01/0102/24', 'phonograph', 'GR', '3', '4', 'BCS7837', 'DE', 'BCS7837', 'EN',
+      'DE', '0', 'EL', 'EL', '1', '1', '1', '20181003', 'ΤΕΛΩΝΕΙΟ ΑΘΗΝΩΝ', 'EL', '701-9454426-6350649', 'C', '0',
+      'PHONOGRAPH ΕΠΕ', 'ΛΕΩΦ. ΠΟΣΕΙΔΩΝΟΣ 93', '16674', 'ΓΛΥΦΑΔΑ', 'GR', 'EL', 'GR997728048', 'Philip Santos',
+      '510 Goodale Drive.', 'R1N 3M3', 'Portage la Prairie, Manitoba', 'CA', 'EN', 'GR000102', 'GR000304', '1',
+      'ΠΑΙΧΝΙΔΙΑ Ubisoft Maria Ubisoft Aguilar', '1', '0.7', '10', '0', '0', '73.65', 'GR', '380',
+      '701-9454426-6350649', 'Z', 'N380', '701-9454426-6350649', 'EN''N705', '2647541433', 'EN', 'Y903', '-', 'EL',
+      'Y935', '-', 'EL',
+      '1961', '17GR000001SASP00038', 'EL', '95030035', '0', '4099', '0', '0', '2647541433', 'EN', 'PC', '1', '400',
+      'FCA', 'ΑΘΗΝΑ', 'EN', 'CAD', '111.4', '1.5126', '1']
+#More Notes
+'Concat the two lists in a pandas DataFrame'
+df1 = pd.concat([pd.DataFrame(l1), pd.DataFrame(l2)], axis=1)
+
+"""

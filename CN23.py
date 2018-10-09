@@ -214,7 +214,7 @@ def clearFolderData(mypath):
 
 def sendGridEmail():
 
-    client = sendgrid.SendGridClient("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")
+    client = sendgrid.SendGridClient("...")
     message = sendgrid.Mail()
 
     message.add_to("gekko1990@gmail.com")
