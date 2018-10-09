@@ -47,12 +47,12 @@ def fetchWixData(userId):
         #    pass
 
     print('Done with Data Requesting / Storing and Formatting from Wix DB')
-    parseOrders(userId, wixDataSender, wixUserEmail)
+    parseOrders(wixDataSender, wixUserEmail)
 
     #jsonfiles = json.loads(df0.to_json(orient='records'))
     #return jsonify({'jsonfiles': jsonfiles})
 
-def parseOrders(userId, dataSender, wixUserEmail):
+def parseOrders(dataSender, wixUserEmail):
 
     for folder in os.walk(ParentPath + '/' + wixUserEmail):
         files = folder[-1]

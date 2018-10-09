@@ -80,7 +80,7 @@ xmlFileIn = "CC515A_Phonograph_Template_Submission.xml"
 'Get Orders'
 df0 = pd.read_csv('templateOrders.csv',  delimiter=',', encoding = "cp1252")
 print(df0.columns)
-xml_Edit_Info_CC515A(xmlFileIn)
+#xml_Edit_Info_CC515A(xmlFileIn)
 
 l2 = ['UNOC', '3', 'TRADER.GR', 'NXA.GR', '170726', '955', '1.50105E+12', '0', '1.50105E+12', 'CC515A',
           '1.53856E+12', 'EX', 'CA', '01/0102/24', 'phonograph', 'GR', '3', '4', 'BCS7837', 'DE', 'BCS7837', 'EN',
