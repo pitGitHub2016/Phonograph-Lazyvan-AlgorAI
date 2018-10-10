@@ -149,7 +149,7 @@ def xml_Edit_Info_CC515A(xmlFile):
         if len(l1) == len(l2):
             for i in range(len(l1)):
                 tree.find('.//' + l1[i]).text = l2[i]
-                tree.write(os.path.realpath('Output_Icisnet/') + '/' + str(row['order-id']) + '_' + xmlFile)
+                tree.write(os.path.realpath('Output_Icisnet/') + '/' + str(row['order-id']) + '_' + xmlFile, encoding="UTF-8", xml_declaration=True)
         else:
             print('Error Algomyth Icisnet Fill : l1 and l2 lists have different sizes! Cannot fill the fields ... check the input csv again! ... ')
 
