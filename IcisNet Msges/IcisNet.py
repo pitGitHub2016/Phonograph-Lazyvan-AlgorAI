@@ -62,14 +62,25 @@ def xml_Edit_Info_CC515A(xmlFile):
     for index, row in dfTemplateOrder.iterrows():
         print(index + 1, dfTemplateOrder.iloc[:, 0].size)
 
-        l2 = ['UNOC', '3', 'TRADER.GR', 'NXA.GR', '170726', '955', '1.50105E+12', '0', '1.50105E+12', 'CC515A',
+        recN = str(row['recipient-name'])
+        spc = str(row['ship-postal-code'])
+
+        l2 = ['UNOC', '3', 'TRADER.GR', 'NXA.GR',
+
+              #'170726',
+              datetime.datetime.now().strftime("%y%m%d"),
+
+              #'955',
+              datetime.datetime.now().strftime("%H%M"),
+
+              '1.50105E+12', '0', '1.50105E+12', 'CC515A',
 
               #'1.53856E+12',
               'phonograph_Test',
 
               'EX',
               # 'CA',
-              str(row['product-name']),
+              str(row['ship-country']),
               '01/0102/24', 'phonograph', 'GR', '3', '4',
               'BCS7837', 'DE', 'BCS7837', 'EN', 'DE', '0', 'EL', 'EL', '1', '1', '1',
 
@@ -84,11 +95,11 @@ def xml_Edit_Info_CC515A(xmlFile):
               'C', '0', 'PHONOGRAPH ΕΠΕ', 'ΛΕΩΦ. ΠΟΣΕΙΔΩΝΟΣ 93', '16674', 'ΓΛΥΦΑΔΑ', 'GR', 'EL', 'GR997728048',
 
               # 'Philip Santos',
-              str(row['recipient-name']),
+              recN[0:35],
               # '510 Goodale Drive.',
               str(row['ship-address-1']),
               # 'R1N 3M3',
-              str(row['ship-postal-code']),
+              spc[0:5],
               # 'Portage la Prairie, Manitoba',
               str(row['ship-city']),
               # 'CA',
@@ -103,7 +114,7 @@ def xml_Edit_Info_CC515A(xmlFile):
               # '0.7',
               str(row['NET']),
 
-              '10', '0', '0',
+              '10', '00', '000',
 
               # '73.65',
               str(row['PRICE']),
@@ -128,12 +139,12 @@ def xml_Edit_Info_CC515A(xmlFile):
               # '95030035',
               str(row['TARIC']),
 
-              '0', '4099', '0', '0',
+              '00', '4099', '0000', '0000',
 
               # '2647541433',
               str(row['TRACKING']),
 
-              'EN', 'PC', '1', '400', 'FCA', 'ΑΘΗΝΑ', 'EN',
+              'EN', 'PC', '1', '00400', 'FCA', 'ΑΘΗΝΑ', 'EN',
 
               # 'CAD',
               str(row['currency']),
@@ -158,6 +169,8 @@ def xml_Edit_Info_CC515A(xmlFile):
 xsdFileIn = 'CC515A.xsd'
 xmlFileIn = "CC515A_Phonograph_Template_Submission.xml"
 xml_Edit_Info_CC515A(xmlFileIn)
+
+#xml_Read_Validate(os.path.realpath('Output_Icisnet/') + '/' + '111-0097454-1677011_CC515A_Phonograph_Template_Submission.xml', xsdFileIn)
 
 """
 #Sample l2
